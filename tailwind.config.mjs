@@ -5,9 +5,8 @@ export default {
         extend: {
             fontFamily: {
                 'poppins': ['poppins', 'sans-serif'],
-            },
-            backgroundImage: {
-                'text-gradient': 'linear-gradient(to right, #4b0082, #c084fc, #8f00ff, #c084fc, #4b0082)',
+                'Megrim' : ['Megrim','sans-serif'],
+                'Averia' : ['Averia Sans Libre','sans-serif']
             },
         },
     },
