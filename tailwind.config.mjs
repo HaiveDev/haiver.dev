@@ -4,9 +4,8 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                'poppins': ['poppins', 'sans-serif'],
                 'Megrim' : ['Megrim','sans-serif'],
-                'Averia' : ['Averia Sans Libre','sans-serif']
+                'Averia' : ['Averia Sans Libre','sans-serif'],
             },
         },
     },
