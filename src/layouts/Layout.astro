@@ -13,8 +13,9 @@ const { title } = Astro.props;
 <html lang="es">
   <head>
     <title>{title}</title>
+    <meta name="title" content={title} />
     <meta charset="UTF-8" />
-    <meta name="description" content="Haiver's Portfolio and blog 🚀" />
+    <meta name="description" content="Portafolio y blog de Haiver 🚀" />
     <meta
       name="keywords"
       content="Haiver, ImHaiver, haiver.dev, Desarrollador, Developer, Frontend Developer, Desarrollador Frontend, Portafolio, Portafolio Haiver, Pagina Haiver, Haiver's webpage"
@@ -24,13 +25,19 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
 
+    <meta property="og:type" content="website" />
     <meta property="og:url" content="https://haiver.dev/" />
     <meta property="og:owners" content="Haiver" />
-    <meta property="og:type" content="portfolio" />
-    <meta property="og:site_name" content="haiver.dev" />
-    <meta property="og:title" content="Haiver.dev | Front End" />
-    <meta property="og:description" content="Haiver's Portfolio and blog 🚀" />
-    <meta property="og:image" content="../../public/img/Banner.png" />
+    <meta property="og:title" content="Porfolio de Haiver - Desarrollador web junior" />
+    <meta property="og:description" content="Portafolio y blog de Haiver 🚀" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/HaiveDev/haiver.dev/main/public/img/Banner.png" />
+
+  
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://haiver.dev/" />
+    <meta property="twitter:title" content="Porfolio de Haiver - Desarrollador web junior" />
+    <meta property="twitter:description" content="Portafolio y blog de Haiver 🚀" />
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/HaiveDev/haiver.dev/main/public/img/Banner.png" />
 
     <meta name="url" content="https://haiver.dev/" />
     <meta name="audience" content="all" />
@@ -38,10 +45,6 @@ const { title } = Astro.props;
     <meta name="robots" content="index, follow" />
     <meta name="revisit-after" content="7 days" />
 
-    <link
-      href="https://api.fontshare.com/v2/css?f[]=poppins@900,500,400,700,600&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body class="relative">
     <div
