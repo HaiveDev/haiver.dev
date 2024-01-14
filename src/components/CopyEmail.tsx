@@ -19,7 +19,7 @@ const CopyEmail = () => {
             }
         )
 
-        navigator.clipboard.writeText("devhaiverueda@gmail.com")
+        navigator.clipboard.writeText('contact@haiver.dev')
     };
     return (
         <div className='flex'>
