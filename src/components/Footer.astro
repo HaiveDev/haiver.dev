@@ -1,4 +1,9 @@
 ---
+import { getI18N } from "../i18n"
+
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+
 var year = new Date().getFullYear();
 ---
 
@@ -6,15 +11,15 @@ var year = new Date().getFullYear();
     <div class="mx-auto max-w-screen-xl px-4 py-6">
         <div class="text-center sm:flex sm:items-center sm:justify-between">
             <p class="text-purple-200">
-                Desarrollado con 💜 & 
+                {i18n.FOOTER.AUTHOR[0]} 💜 & 
                     <span>
                         <a class="underline hover:text-purple-300" target="_blank" href="https://astro.build/">Astro</a>
                     </span>
-                por Haiver.
+                {i18n.FOOTER.AUTHOR[1]}
             </p>
 
             <p class="mt-2 text-gray-400 lg:text-right">
-                © {year} - Todos los derechos reservados... creo.
+                © {year} - {i18n.FOOTER.COPYRIGHT}
             </p>
         </div>
     </div>
