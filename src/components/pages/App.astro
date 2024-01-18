@@ -1,4 +1,5 @@
 ---
+
 import SectionContainer from "../SectionContainer.astro";
 import Layout from "../../layouts/Layout.astro";
 import CopyEmail from "../CopyEmail";
@@ -7,68 +8,49 @@ import { getI18N } from "../../i18n"
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 
-const Subtitle = i18n.PRESENTATION_DESCRIPTION
 ---
 
-<Layout title="Portafolio de Haiver - Desarrollador web junior">
+<Layout title={i18n.SEO_TITLE}>
     <main class="px-4">
         <SectionContainer class="my-20">
-            <h1 class="font- w-full text-6xl font-black text-purple-200 sm:text-7xl">
+            <h1 class="font-Averia font-black w-full text-4xl lg:text-5xl xl:text-6xl">
                 {i18n.PRESENTATION_TITLE}
             </h1>
-            <div class="mt-6 items-center font-Averia sm:flex sm:space-x-2">
-                <span class="text-xl text-purple-200 sm:text-2xl">
-                    { Subtitle }
+            <div class="mt-2 sm:mt-4 items-center font-Averia sm:flex sm:space-x-2">
+                <span class="text-xl sm:text-2xl">
+                    { i18n.PRESENTATION_DESCRIPTION }
                 </span>
-                <div class="mt-2 inline-flex sm:mt-0">
+                
+            </div>
+            <div class="mt-4 sm:mt-2 flex">
+                <div class="inline-flex me-1">
                     <span
                         class="rounded-md border border-green-500 bg-green-500/10 px-2.5 py-0.5 font-Averia text-sm text-green-500">
                         {i18n.TAG_CHAMBA}
                     </span>
                 </div>
-                <div class="mt-2 inline-flex items-center sm:mt-0">
-                    <span
-                        class="rounded-s-md border border-e-0 border-yellow-500 bg-yellow-500/10 px-2.5 py-0.5 font-Averia text-sm text-yellow-500">
-                        contact@haiver.dev
-                    </span>
+                <div class="mt-2 sm:mt-0">
+                    
                     <CopyEmail client:load />
                 </div>
             </div>
             <div class="mt-10 max-w-[700px] font-Averia text-lg sm:text-xl">
-                <p class="text-purple-100">
+                <p>
                     {i18n.PARAGRAPH_DESCRIPTION}
                 </p>
             </div>
         </SectionContainer>
 
-        <SectionContainer class="font-Averia">
+        <SectionContainer class="my-56">
             <p>
-                -  {i18n.SECTION_XP.DESCRIPTION}
-                <span
-                    class="rounded-md border border-blue-500 bg-blue-500/10 px-2.5 py-0.5 font-Averia text-sm text-blue-500">
-                    {i18n.SECTION_XP.TAG}
-                </span>
+                - Experiencia
             </p>
-            <p class="pt-2">
-                - {i18n.SECTION_PY.DESCRIPTION}
-                <span
-                    class="rounded-md border border-blue-500 bg-blue-500/10 px-2.5 py-0.5 font-Averia text-sm text-blue-500">
-                    {i18n.SECTION_PY.TAG}
-                </span>
+        </SectionContainer>
+        <SectionContainer class="my-56">
+            <p>
+                - Proyectos
             </p>
-            <p class="pt-2">
-                - Blog
-                <span
-                    class="rounded-md border border-blue-500 bg-blue-500/10 px-2.5 py-0.5 font-Averia text-sm text-blue-500">
-                    {i18n.BLOG.TAG}
-                </span>
-            </p>
-
-            <div class="ms-1 mt-2 border-s-2 border-gray-400 ps-4">
-                <p>{i18n.BLOG.ITEMS[0]}</p>
-                <p>{i18n.BLOG.ITEMS[1]}</p>
-                <p>{i18n.BLOG.ITEMS[2]}</p>
-            </div>
         </SectionContainer>
     </main>
 </Layout>
+

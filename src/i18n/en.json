@@ -1,31 +1,22 @@
 {
-    "SEO_TITLE": "Haiver's Portfolio - Junior Web Developer",
+    "SEO_TITLE": "Haiver's Portfolio - Web Developer",
     "SEO_DESCRIPTION": "Haiver's portfolio and blog 🚀",
 
-    "PRESENTATION_TITLE": "Hello, I'm Haiver",
-    "PRESENTATION_DESCRIPTION": "<Junior Web Developer/>",
+    "HEADER":{
+        "NAVBAR":{
+            "HOME":"Home",
+            "EXPERIENCE":"Experience",
+            "PROJECTS":"Projects"
+        }
+    },
 
-    "TAG_CHAMBA": "Ready to work :]",
+    "PRESENTATION_TITLE": "Hello, I'm Haiver",
+    "PRESENTATION_DESCRIPTION": "Web Developer",
+
+    "TAG_CHAMBA": "available for new projects",
 
     "PARAGRAPH_DESCRIPTION": "Enthusiastic web developer with a fresh and modern approach, ready to dive into new challenges.",
 
-    "SECTION_XP": {
-        "DESCRIPTION": "Experience Section",
-        "TAG": "Coming soon..."
-    },
-    "SECTION_PY": {
-        "DESCRIPTION": "Projects Section",
-        "TAG": "Coming soon..."
-    },
-    "BLOG": {
-        "DESCRIPTION": "Blog",
-        "TAG": "In the not so distant future ✨",
-        "ITEMS": [
-            "Tutorials",
-            "Tips",
-            "Resources"
-        ]
-    },
     "FOOTER": {
         "AUTHOR": [
             "Developed with",
