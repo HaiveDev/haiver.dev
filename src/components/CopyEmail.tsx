@@ -1,40 +1,40 @@
-import { Toaster, toast } from 'sonner'
-
+import { Toaster, toast } from "sonner";
+import { IconClipboard } from "@tabler/icons-react";
 // ...
 
 const CopyEmail = () => {
     const functionCopy = () => {
-        toast(
-            <div className='flex items-center space-x-2 font-Averia text-sm'>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                </svg>
-
-
-                <span>
-                    ¡Correo copiado al portapapeles!
-                </span>
-            </div>,{
+        
+        toast.success(
+            "!Copiado al portapeles¡",
+            {
                 duration: 3000,
             }
-        )
+        );
 
-        navigator.clipboard.writeText('contact@haiver.dev')
+        navigator.clipboard.writeText("contact@haiver.dev");
     };
     return (
-        <div className='flex'>
+        <div className="flex">
             <Toaster />
-            <button
-                className="inline-block rounded-e-md text-yellow-500 bg-yellow-500/10 border border-s-0 border-yellow-500 transition hover:bg-yellow-500/20 px-1 py-1"
-                onClick={functionCopy}>
-
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184" />
-                </svg>
-
-
-            </button>
+                    
+            <span
+                className="rounded-s-md border border-e-0 border-yellow-500 bg-yellow-500/10 px-2.5 py-0.5 font-Averia text-sm text-yellow-500">
+                    contact@haiver.dev
+            </span>
+            <div className="relative group/tooltip">
+                <button
+                    className="inline-block h-full  rounded-e-md border border-s-0 border-yellow-500 bg-yellow-500/10 px-2  text-yellow-500 transition hover:bg-yellow-500/20"
+                    onClick={functionCopy}
+                >
+                    <IconClipboard width={16} height={16} stroke={1.5}/>
+                </button>
+                <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-white dark:text-gray-700 before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-white before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">Copiar correo</span>
+            </div>
+            
         </div>
-    )
-}
+    );
+    
+};
+
 export default CopyEmail;

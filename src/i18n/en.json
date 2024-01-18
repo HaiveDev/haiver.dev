@@ -1,0 +1,27 @@
+{
+    "SEO_TITLE": "Haiver's Portfolio - Web Developer",
+    "SEO_DESCRIPTION": "Haiver's portfolio and blog 🚀",
+
+    "HEADER":{
+        "NAVBAR":{
+            "HOME":"Home",
+            "EXPERIENCE":"Experience",
+            "PROJECTS":"Projects"
+        }
+    },
+
+    "PRESENTATION_TITLE": "Hello, I'm Haiver",
+    "PRESENTATION_DESCRIPTION": "Web Developer",
+
+    "TAG_CHAMBA": "available for new projects",
+
+    "PARAGRAPH_DESCRIPTION": "Enthusiastic web developer with a fresh and modern approach, ready to dive into new challenges.",
+
+    "FOOTER": {
+        "AUTHOR": [
+            "Developed with",
+            "by Haiver"
+        ],
+        "COPYRIGHT": "All rights reserved... I think."
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "SEO_TITLE": "Portafolio de Haiver - Desarrollador web",
+    "SEO_DESCRIPTION": "Portafolio y blog de Haiver 🚀",
+
+    "HEADER":{
+        "NAVBAR":{
+            "HOME":"Inicio",
+            "EXPERIENCE":"Experiencia",
+            "PROJECTS":"Proyectos"
+        }
+    },
+
+    "PRESENTATION_TITLE": "Hola, soy Haiver",
+    "PRESENTATION_DESCRIPTION": "Desarrollador web",
+    
+    "TAG_CHAMBA": "disponible para nuevos proyectos",
+
+    "PARAGRAPH_DESCRIPTION": "Entusiasta del desarrollo web con un enfoque fresco y moderno, Listo para sumergirme en nuevos desafíos.",
+
+    "FOOTER": {
+        "AUTHOR": [
+            "Desarrollado con",
+            "por Haiver"
+        ],
+        "COPYRIGHT": "Todos los derechos reservados... creo."
+    }
+}

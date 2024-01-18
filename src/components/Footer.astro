@@ -1,19 +1,28 @@
 ---
+import { getI18N } from "../i18n"
+
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+
 var year = new Date().getFullYear();
 ---
 
-<footer class="bg-black/20 w-full xl:w-[1120px] mx-auto mt-auto font-Averia text-sm">
-    <div class="mx-auto max-w-screen-xl py-6 px-4">
-      <div class="sm:flex sm:items-center sm:justify-between text-center">
-
-        <p class="text-purple-200" >
-          Desarrollado con 💜 & <span><a class="underline hover:text-purple-300" target="_blank" href="https://astro.build/">Astro</a></span> por Haiver.
+<footer class="font-Averia mx-auto mt-auto w-full px-4 text-sm xl:px-0">
+    <div class="mx-auto w-full py-6 xl:w-[1120px]">
+        <p class="my-4 border-b border-gray-100/10 sm:pb-6 pb-4 text-center">
+            {i18n.FOOTER.AUTHOR[0]} 💜 &
+            <span>
+                <a class="hover:text-purple-200 hover:underline" target="_blank" href="https://astro.build/">Astro</a>
+            </span>
+            {i18n.FOOTER.AUTHOR[1]}
         </p>
+        <div class="text-center sm:flex sm:items-center sm:justify-between">
+            <p>© {year} - {i18n.FOOTER.COPYRIGHT}</p>
 
-        <p class="mt-2 text-gray-400 lg:text-right">
-          © {year} - Todos los derechos reservados... creo.
-        </p>
-        
-      </div>
+            <p class="mt-2 divide-x sm:mt-0">
+                <a class="me-1 hover:underline" href="/">es</a>
+                <a class="ps-1.5 hover:underline" href="en">en</a>
+            </p>
+        </div>
     </div>
 </footer>
