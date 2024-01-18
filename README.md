@@ -1,6 +1,6 @@
 # 🚀 Haiver.dev Portfolio
 
-![just-the-basics](https://raw.githubusercontent.com/HaiveDev/haiver.dev/main/public/img/Banner.png)
+![just-the-basics](https://raw.githubusercontent.com/HaiveDev/haiver.dev/main/public/img/banner.png)
 
 Bienvenido al repositorio del código fuente de mi portafolio personal, [Haiver.dev](https://haiver.dev/). Aquí encontrarás la implementación de mi sitio web que presenta mi trabajo como Desarrollador Web Junior y mi blog relacionado.
 
