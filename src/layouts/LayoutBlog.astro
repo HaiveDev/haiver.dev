@@ -1,7 +1,7 @@
 ---
 import { ViewTransitions } from "astro:transitions";
 import Header from "@/components/Header.astro";
-import Footer from "@/components/Footer.astro";
+import FooterBlog from "@/components/blog/FooterBlog.astro";
 import ScrollToTopButton from "@/components/ScrollTopBtn";
 import { getI18N } from "@/i18n";
 
@@ -54,7 +54,7 @@ const i18n = getI18N({ currentLocale });
 
 <body class="relative bg-neutral-950 selection:bg-purple-200/20 selection:text-gray-400 text-white">
     <div class="absolute h-screen object-cover pointer-events-none">
-        <img src="/background.webp" alt="background"
+        <img src="/backgroundBlog.webp" alt="background"
             class="opacity-20 h-screen w-screen object-cover blur-3xl fixed" />
     </div>
     <svg class="pointer-events-none fixed isolate z-50 opacity-70 mix-blend-soft-light h-full w-full">
@@ -69,7 +69,7 @@ const i18n = getI18N({ currentLocale });
 
         <slot />
 
-        <Footer />
+        <FooterBlog />
         <ScrollToTopButton client:load />
     </div>
     <style is:global>
@@ -111,21 +111,6 @@ const i18n = getI18N({ currentLocale });
             background: rgba(255, 255, 255, 0.5);
         }
 
-        /* #header-nav {
-            animation: blur linear both;
-            animation-timeline: scroll();
-            animation-range: 0 100px;
-        }
-
-        @keyframes blur {
-            to {
-                box-shadow:
-                    0px 0px 50px 0px rgba(0, 0, 0, 0.1),
-                    0px 0px 0 1px rgba(0, 0, 0, 0.3);
-                background: rgba(0, 0, 0, 0.3);
-                backdrop-filter: blur(15px);
-            }
-        } */
     </style>
 </body>
 

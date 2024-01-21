@@ -1,5 +1,6 @@
 ---
-import { getI18N } from "../i18n"
+import { IconHeart, IconHeartFilled } from "@tabler/icons-react"
+import { getI18N } from "@/i18n"
 
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
@@ -7,12 +8,18 @@ const i18n = getI18N({ currentLocale })
 var year = new Date().getFullYear();
 ---
 
-<footer class="font-Averia mx-auto mt-auto w-full px-4 text-sm xl:px-0">
+<footer class="mx-auto mt-auto w-full px-4 text-sm xl:px-0">
     <div class="mx-auto w-full py-6 xl:w-[1120px]">
-        <p class="my-4 border-b border-gray-100/10 sm:pb-6 pb-4 text-center">
-            {i18n.FOOTER.AUTHOR[0]} 💜 &
+        <p class="my-4 flex items-center justify-center border-b border-gray-100/10 pb-4 text-center sm:pb-6">
+            {i18n.FOOTER.AUTHOR[0]}
+            <span class="group"> 
+                <IconHeart width={16} className="mx-1 group-hover:hidden" />
+                <IconHeartFilled width={16} className="mx-1 text-red-500  hidden group-hover:block" />
+            </span>
+            &
             <span>
-                <a class="hover:text-purple-200 hover:underline" target="_blank" href="https://astro.build/">Astro</a>
+                <a class="mx-1 transition-all duration-300 hover:text-yellow-500 hover:underline" target="_blank"
+                    href="https://astro.build/">Astro</a>
             </span>
             {i18n.FOOTER.AUTHOR[1]}
         </p>
@@ -21,7 +28,7 @@ var year = new Date().getFullYear();
 
             <p class="mt-2 divide-x sm:mt-0">
                 <a class="me-1 hover:underline" href="/">es</a>
-                <a class="ps-1.5 hover:underline" href="en">en</a>
+                <a class="ps-1.5 hover:underline" href="/en">en</a>
             </p>
         </div>
     </div>

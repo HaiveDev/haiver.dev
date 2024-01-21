@@ -4,19 +4,41 @@
 
     "HEADER":{
         "NAVBAR":{
-            "HOME":"Inicio",
-            "EXPERIENCE":"Experiencia",
-            "PROJECTS":"Proyectos"
+            "HOME":"inicio",
+            "EXPERIENCE":"experiencia",
+            "PROJECTS":"proyectos"
         }
     },
 
-    "PRESENTATION_TITLE": "Hola, soy Haiver",
+    "PRESENTATION_TITLE": "Haiver Rueda",
     "PRESENTATION_DESCRIPTION": "Desarrollador web",
     
     "TAG_CHAMBA": "Disponible para nuevos proyectos",
 
-    "PARAGRAPH_DESCRIPTION": "Entusiasta del desarrollo web con un enfoque fresco y moderno, Listo para sumergirme en nuevos desafíos.",
+    "PARAGRAPH_DESCRIPTION": "Con perspectiva fresca y moderna, dispuesto a enfrentar desafíos con creatividad y determinación.",
 
+
+    "SECTION_XP": {
+
+        "EXPERIENCES": [
+            {
+                "POSITION": "Desarrollador FrontEnd",
+                "DESCRIPTION": "Colaborando en el desarrollo front-end de una página gubernamental con WordPress. Además, estoy trabajando en mi blog personal, donde compartiré ideas, experiencias y consejos relacionados con el mundo del desarrollo y la tecnología.",
+                "TIMEFRAME": "Actualmente"
+            },
+            {
+                "POSITION": "Diseñador UX/UI",
+                "DESCRIPTION": "Diseñé un directorio comercial, partiendo desde bocetos y maquetas hasta la interactividad en Figma. Enfoque en diseño responsive.",
+                "TIMEFRAME": "09/2023"
+            },
+            {
+                "POSITION": "Desarrollador FrontEnd - Energuaviare SA ESP",
+                "DESCRIPTION": "Desarrollé el front-end de un sistema de factibilidades en vanilla JavaScript. Además, creé por completo una aplicación web para una mesa de ayuda interna, incorporando un panel administrativo con una interfaz minimalista en Angular y estilizada con Tailwind CSS, respaldada por una base de datos SQLite.",
+                "TIMEFRAME": "04/2023 - 08/2023"
+            }
+        ]
+    },
+    
     "FOOTER": {
         "AUTHOR": [
             "Desarrollado con",
