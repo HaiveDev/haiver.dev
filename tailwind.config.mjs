@@ -8,7 +8,8 @@ export default {
         Megrim: ["Megrim", "sans-serif"],
       },
       "animation": {
-        "background-shine": "background-shine 3s linear infinite"
+        "background-shine": "background-shine 3s linear infinite",
+        "move-left": "move-left 1s linear infinite"
       },
       "keyframes": {
         "background-shine": {
@@ -17,6 +18,17 @@ export default {
           },
           "to": {
             "backgroundPosition": "-200% 0"
+          }
+        },
+        "move-left": {
+          "0%": {
+            "transform": "translateX(0%)"
+          },
+          "50%": {
+            "transform": "translateX(0.5%)"
+          },
+          "100%": {
+            "transform": "translateX(0%)"
           }
         }
       }

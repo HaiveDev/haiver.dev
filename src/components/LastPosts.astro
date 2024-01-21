@@ -1,0 +1,32 @@
+---
+import { IconPointFilled, IconChevronRight } from '@tabler/icons-react'
+import { DataPost } from "@/components/blog/HistoryPots.astro"
+
+---
+<section class="grid gap-2 md:grid-cols-2">
+
+{DataPost.slice(0, 2).map((DataPost) => (
+    <article class="relative group bg-white/5 border-2 border-white/20 hover:bg-white/10 rounded-md p-4">
+        
+        
+            <span class="text-sm leading-6 text-white/50">
+                <time>{DataPost.date}</time>
+            </span>
+            <h3 class="line-clamp-2 text-lg font-bold">
+                {DataPost.title}
+            </h3>
+            <div class="mt-2 mb-4 line-clamp-2 text-pretty">
+                <p>
+                    {DataPost.description}
+                </p>
+            </div>
+            
+            <a class="text-sm text-white/50 font-medium group-hover:text-white" href={DataPost.link}>
+                <span class="group-hover:animate-move-left flex items-center">¡Explora más!
+                    <IconChevronRight stroke={2.5} className='h-full w-4 overflow-visible ml-1' />
+                </span>
+                <span class="absolute inset-y-0 inset-x-0 animate-none"></span> 
+            </a>
+    </article>
+))}
+</section>
