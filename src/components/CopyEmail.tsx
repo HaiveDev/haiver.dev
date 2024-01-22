@@ -8,7 +8,7 @@ const CopyEmail = () => {
     const functionCopy = () => {
 
         toast.success(
-            "!Copy to clipboard¡",
+            "!Correo copiado al portapapeles¡",
             {
                 duration: 3000,
             }
