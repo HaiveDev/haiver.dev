@@ -1,6 +1,6 @@
 # 🚀 haiver.dev Portfolio y Blog
 
-![Banner](https://raw.githubusercontent.com/HaiveDev/haiver.dev/main/public/img/banner.webp)
+![Banner](https://raw.githubusercontent.com/HaiveDev/haiver.dev/main/public/banner.webp)
 
 Bienvenido al repositorio del código fuente de mi portafolio personal, [haiver.dev](https://haiver.dev/). Aquí encontrarás la implementación de mi sitio web que presenta mi trabajo como Desarrollador Web y mi blog relacionado.
 
