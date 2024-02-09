@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.4.1",
-    "@astrojs/node": "^8.2.0",
+    "@astrojs/cloudflare": "^9.0.0",
     "@astrojs/react": "^3.0.9",
     "@astrojs/tailwind": "^5.1.0",
     "@auth/core": "^0.18.6",
