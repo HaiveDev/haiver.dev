@@ -27,7 +27,7 @@ const ScrollToTopButton: React.FC = () => {
   return (
     <button
       id="scrollToTopBtn"
-      className="fixed bottom-4 right-4 hidden backdrop-blur bg-white/20 text-white px-2.5 py-2.5 rounded-md transition-all duration-300 ease-in-out hover:opacity-80"
+      className="fixed bottom-4 right-4 hidden backdrop-blur bg-white/20 text-white px-2.5 py-2.5 rounded-md transition-all ease-in-out hover:opacity-80"
       onClick={scrollToTop}
     >
       <IconChevronUp  />
