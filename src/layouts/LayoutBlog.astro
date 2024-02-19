@@ -1,4 +1,6 @@
 ---
+import { pwaInfo } from 'virtual:pwa-info';
+
 import { ViewTransitions } from "astro:transitions";
 import Header from "@/components/Header.astro";
 import FooterBlog from "@/components/blog/FooterBlog.astro";
@@ -49,6 +51,9 @@ const i18n = getI18N({ currentLocale });
     <meta name="language" content="Spanish" />
     <meta name="robots" content="index, follow" />
     <meta name="revisit-after" content="7 days" />
+    <meta name="theme-color" content="#cccccc">
+    { pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} /> }
+    <script src="/src/pwa.ts"></script>
     <ViewTransitions />
 </head>
 
