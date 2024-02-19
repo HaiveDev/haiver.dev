@@ -1,41 +1,28 @@
 ---
 import {
-  IconLogin2,
-  IconBrandGoogle,
-  IconBrandGithub,
+IconLogin2,
+IconBrandGoogle,
+IconBrandGithub,
 } from "@tabler/icons-react";
 
 import { SignIn } from "auth-astro/components";
 ---
 
 <div class="relative rounded-md border-2 border-white/20 bg-white/5 p-3">
-  <div class="absolute top-0 right-0 m-2">
-    <span class="relative flex h-2 w-2">
-      <span
-        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"
-      ></span>
-      <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"
-      ></span>
-    </span>
-  </div>
-  <h2 class="flex items-center justify-center space-x-2">
-    <span class="text-center text-base font-bold">Inicia sesión</span>
-    <IconLogin2 width={16} height={16} />
-  </h2>
-  <div class="mt-4 flex flex-col space-y-2">
-    <SignIn
-      provider="google"
-      class="flex items-center justify-center space-x-2 rounded-md px-3 py-2 text-sm font-semibold border-white/40 transition-all duration-300 hover:bg-white/20 bg-white/15"
-    >
-      <IconBrandGoogle width={20} height={20} />
-      <span>Iniciar con Google</span>
-    </SignIn>
-    <SignIn
-      provider="github"
-      class="flex items-center justify-center space-x-2 rounded-md px-3 py-2 text-sm font-semibold border-white/40 transition-all duration-300 hover:bg-white/20 bg-white/15"
-    >
-      <IconBrandGithub width={20} height={20} />
-      <span>Iniciar con Github</span>
-    </SignIn>
-  </div>
+    <div class="absolute right-0 top-0 m-2">
+        <span class="relative flex h-2 w-2">
+            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
+        </span>
+    </div>
+    <h2 class="flex items-center justify-center space-x-2">
+        <span class="text-center text-base font-bold">Inicia sesión</span>
+    </h2>
+    <div class="mt-4 flex flex-col space-y-2">
+        <SignIn provider="github"
+            class="flex items-center justify-center space-x-2 rounded-md border-white/40 bg-white/15 px-3 py-2 text-sm font-semibold transition-all hover:bg-white/20">
+            <IconBrandGithub width={20} height={20} />
+            <span>Iniciar con Github</span>
+        </SignIn>
+    </div>
 </div>
