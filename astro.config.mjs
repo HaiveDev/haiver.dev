@@ -15,9 +15,9 @@ export default defineConfig({
     includeAssets: ['favicon.svg'],
     registerType: 'autoUpdate',
     manifest: {
-      name: 'Haiver',
-      short_name: 'Portafolio de Haiver',
-      theme_color: '#cccccc',
+      name: 'Portafolio de Haiver',
+      short_name: 'Haiver',
+      theme_color: '#21272a',
       icons: [
         {
           src: 'icon-57x57.png',
@@ -68,15 +68,21 @@ export default defineConfig({
       ],
     },
     workbox: {
-      navigateFallback: '/',
-      globPatterns: ['**/*.{css,js,html,svg,png,ico,txt}'],
+      navigateFallback: '/404',
+      globDirectory: 'dist',
+      globPatterns: ['**/*.{js,css,html,txt,json,svg,woff,woff2,ico,xml}'],
+      globIgnores: [
+        '**/node_modules/**/*',
+        'sw.js',
+        'workbox-*.js'
+      ]
     },
     devOptions: {
       enabled: true,
-      navigateFallbackAllowlist: [/^\//],
+      navigateFallbackAllowlist: [/^\/404$/],
     },
-    experimental: {
-      directoryAndTrailingSlashHandler: true,
+  experimental: {
+  directoryAndTrailingSlashHandler: true,
     }
   }),],
   i18n: {
