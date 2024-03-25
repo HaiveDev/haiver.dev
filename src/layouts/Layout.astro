@@ -2,6 +2,7 @@
 import { pwaInfo } from 'virtual:pwa-info';
 
 import { ViewTransitions } from "astro:transitions";
+import Achievement from "@/components/Achievement.astro"
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import ScrollToTopButton from "@/components/ScrollTopBtn";
@@ -30,7 +31,7 @@ const i18n = getI18N({ currentLocale });
         content="Haiver, ImHaiver, haiver.dev, Desarrollador, Developer, Frontend Developer, Desarrollador Frontend, Portafolio, Portafolio Haiver, Pagina Haiver, Haiver's webpage,  Blog, Blog de haiver, Blog's Haiver, Desarrollo web" />
     <meta name="author" content="Haiver" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="icons/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
 
     <meta property="og:type" content="website" />
@@ -69,6 +70,7 @@ const i18n = getI18N({ currentLocale });
     </svg>
 
     <div class="relative z-10" id=`${i18n.HEADER.NAVBAR.HOME}`>
+        <Achievement />
         <Header />
 
         <slot />
@@ -77,6 +79,10 @@ const i18n = getI18N({ currentLocale });
         <ScrollToTopButton client:load />
     </div>
     <style is:global>
+        @font-face {
+            font-family: "minecraft";
+            src: url("/fonts/Minecraft.ttf") format("truetype");
+        }
         @font-face {
             font-family: "mona-sans";
             src:
@@ -106,7 +112,7 @@ const i18n = getI18N({ currentLocale });
         }
 
         ::-webkit-scrollbar-thumb {
-            background: rgba(255, 255, 255, 0.3);
+            background: #555555;
             backdrop-filter: blur(10px);
             border-radius: 5px;
         }
