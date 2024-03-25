@@ -10,7 +10,7 @@ import LastPosts from "@/components/LastPosts.astro";
 import CopyEmail from "@/components/CopyEmail";
 import BadgeSocial from "@/components/BadgeSocial.astro"
 
-import { IconBrandGithub, IconBrandLinkedin, IconBrandDiscord, IconFileDescription, IconMapPin, IconBookmarks, IconNotification } from "@tabler/icons-react";
+import { IconBrandGithub, IconBrandLinkedin, IconBrandDiscord, IconFileDescription, IconMapPin, IconHammer, IconNotification } from "@tabler/icons-react";
 
 import { getI18N } from "@/i18n"
 
@@ -82,7 +82,7 @@ const i18n = getI18N({ currentLocale })
                 <span class="text-2xl sm:text-3xl font-semibold">
                     {i18n.HEADER.NAVBAR.PROJECTS}
                 </span>
-                <IconBookmarks width={32} height={32} />
+                <IconHammer width={32} height={32} />
             </h2>
             <Projects />
         </SectionContainer>

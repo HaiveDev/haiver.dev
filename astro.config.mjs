@@ -12,7 +12,7 @@ export default defineConfig({
     mode: 'development',
     base: '/',
     scope: '/',
-    includeAssets: ['favicon.svg'],
+    includeAssets: ['icons/favicon.svg'],
     registerType: 'autoUpdate',
     manifest: {
       name: 'Portafolio de Haiver',
@@ -20,47 +20,47 @@ export default defineConfig({
       theme_color: '#21272a',
       icons: [
         {
-          src: 'icon-57x57.png',
+          src: 'icons/icon-57x57.png',
           sizes: '57x57',
           type: 'image/png',
         },
         {
-          src: 'icon-72x72.png',
+          src: 'icons/icon-72x72.png',
           sizes: '72x72',
           type: 'image/png',
         },
         {
-          src: 'icon-76x76.png',
+          src: 'icons/icon-76x76.png',
           sizes: '76x76',
           type: 'image/png',
         },
         {
-          src: 'icon-114x114.png',
+          src: 'icons/icon-114x114.png',
           sizes: '114x114',
           type: 'image/png',
         },
         {
-          src: 'icon-120x120.png',
+          src: 'icons/icon-120x120.png',
           sizes: '120x120',
           type: 'image/png',
         },
         {
-          src: 'icon-144x144.png',
+          src: 'icons/icon-144x144.png',
           sizes: '144x144',
           type: 'image/png',
         },
         {
-          src: 'icon-152x152.png',
+          src: 'icons/icon-152x152.png',
           sizes: '152x152',
           type: 'image/png',
         },
         {
-          src: 'icon-180x180.png',
+          src: 'icons/icon-180x180.png',
           sizes: '180x180',
           type: 'image/png',
         },
         {
-          src: 'icon-180x180.png',
+          src: 'icons/icon-180x180.png',
           sizes: '180x180',
           type: 'image/png',
           purpose: 'any maskable',

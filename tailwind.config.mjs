@@ -1,3 +1,5 @@
+import animations from "@midudev/tailwind-animations"
+
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: 'class',
@@ -5,11 +7,16 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        Megrim: ["Megrim", "sans-serif"],
+        Minecraft: ["minecraft", "sans-serif"],
+      },
+      colors:{
+        'yellow-achievement' : '#ffff00'
       },
       "animation": {
         "background-shine": "background-shine 3s linear infinite",
-        "move-left": "move-left 1s linear infinite"
+        "move-left": "move-left 1s linear infinite",
+        "slide-enter-achievement": "slide-enter-achievement 0.6s cubic-bezier( 0.55, 0.085, 0.68, 0.53 )",
+        "slide-exit-achievement": "slide-exit-achievement 0.6s cubic-bezier( 0.55, 0.085, 0.68, 0.53 ) "
       },
       "keyframes": {
         "background-shine": {
@@ -30,9 +37,25 @@ export default {
           "100%": {
             "transform": "translateX(0%)"
           }
+        },
+        "slide-enter-achievement": {
+          "0%": {
+            "transform": "translateX(400px)"
+          },
+          "100%": {
+            "transform": "translateX(0)"
+          }
+        },
+        "slide-exit-achievement": {
+          "0%": {
+            "transform": "translateX(0px)"
+          },
+          "100%": {
+            "transform": "translateX(400px)"
+          }
         }
       }
     },
   },
-  plugins: [],
+  plugins: [animations],
 };
