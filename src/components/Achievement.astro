@@ -6,7 +6,7 @@
         "Lector Asiduo",
         "Contribuyente Activo",
         "Escritor Prodigioso",
-        "Crítico Expert",
+        "Crítico Experto",
         "Favorito Fiel",
         "Explorador Curioso",
         "Lector Leal"
@@ -26,6 +26,7 @@
         "allium",
         "grass_block_side",
         "observer_front",
+        "netherite_chestplate",
 
     ]
     const randomAchievement = achievements[Math.floor(Math.random() * achievements.length)];
@@ -38,15 +39,15 @@
     <div 
         role="alert"
         id="toast"
-        class="fixed hidden right-0 top-0 z-50 m-0  h-16 sm:h-20 w-80 sm:w-96 items-center bg-contain bg-center ps-[7px] font-Minecraft text-sm sm:text-base"
+        class="fixed hidden right-0 top-0 z-50 m-0  h-16 sm:h-20 w-80 sm:w-96 items-center bg-contain bg-center ps-[7px] font-Minecraft text-sm sm:text-lg"
         style="background-image: url(/achievements/toast.png)"
     >
         <div class="mx-3 sm:mx-4">
-            <img class="w-6 sm:w-8" src=`/achievements/${randomIcon}.png` alt=`${randomIcon}` />
+            <img class="w-7 sm:w-9" src=`/achievements/${randomIcon}.png` alt=`${randomIcon}` />
         </div>
-        <div class="pt-1 sm:pt-[11px]">
-            <p class="text-yellow-achievement">¡Logro desbloqueado!</p>
-            <div>{randomAchievement}</div>
+        <div>
+            <p class="text-yellow-achievement h-4 sm:h-[19px] sm:pt-0 pt-1 tracking-wide whitespace-pre">¡Logro  completado!</p>
+            <p class="h-4 sm:h-[19px] pt-1 mt-1 tracking-wide whitespace-pre">{randomAchievement}</p>
         </div>
     </div>
 </div>
