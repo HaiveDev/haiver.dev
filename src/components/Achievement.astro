@@ -1,89 +1,78 @@
 ---
-    const achievements = [
-        "Novato del Blog",
-        "Comentarista Inicial",
-        "Miembro Registrado",
-        "Lector Asiduo",
-        "Contribuyente Activo",
-        "Escritor Prodigioso",
-        "Crítico Experto",
-        "Favorito Fiel",
-        "Explorador Curioso",
-        "Lector Leal"
-    ];
-    const icons = [
-        "amethyst_cluster",
-        "book",
-        "diamond",
-        "emerald",
-        "flower_banner_pattern",
-        "honey_bottle",
-        "knowledge_book",
-        "oxeye_daisy",
-        "pink_petals",
-        "pink_tulip",
-        "sunflower_front",
-        "allium",
-        "grass_block_side",
-        "observer_front",
-        "netherite_chestplate",
-
-    ]
-    const randomAchievement = achievements[Math.floor(Math.random() * achievements.length)];
-    const randomIcon = icons[Math.floor(Math.random() * icons.length)];
+const achievements = [
+    "Comentarista  Inicial",
+    "Contribuyente  Activo",
+    "Crítico  Experto",
+    "Escritor  Prodigioso",
+    "Explorador  Curioso",
+    "Favorito  Fiel",
+    "Lector  Asiduo",
+    "Lector  Leal",
+    "Miembro  Registrado",
+    "Novato  del Blog",
+]
+const icons = [
+    "allium",
+    "amethyst_cluster",
+    "book",
+    "diamond",
+    "emerald",
+    "flower_banner_pattern",
+    "grass_block_side",
+    "honey_bottle",
+    "knowledge_book",
+    "netherite_chestplate",
+    "observer_front",
+    "oxeye_daisy",
+    "pink_petals",
+    "pink_tulip",
+    "sunflower_front",
+]
+const randomAchievement = achievements[Math.floor(Math.random() * achievements.length)];
+const randomIcon = icons[Math.floor(Math.random() * icons.length)];
 ---
 
-
-
 <div class="flex justify-center">
-    <div 
-        role="alert"
-        id="toast"
-        class="fixed hidden right-0 top-0 z-50 m-0  h-16 sm:h-20 w-80 sm:w-96 items-center bg-contain bg-center ps-[7px] font-Minecraft text-sm sm:text-lg"
-        style="background-image: url(/achievements/toast.png)"
-    >
+    <div role="alert" id="toast"
+        class="fixed right-0 top-0 z-50 hidden h-16 w-80 items-center bg-contain bg-center ps-[7px] font-Minecraft text-sm sm:h-20 sm:w-96 sm:text-lg"
+        style="background-image: url(/achievements/toast.png)">
         <div class="mx-3 sm:mx-4">
             <img class="w-7 sm:w-9" src=`/achievements/${randomIcon}.png` alt=`${randomIcon}` />
         </div>
-        <div>
-            <p class="text-yellow-achievement h-4 sm:h-[19px] sm:pt-0 pt-1 tracking-wide whitespace-pre">¡Logro  completado!</p>
-            <p class="h-4 sm:h-[19px] pt-1 mt-1 tracking-wide whitespace-pre">{randomAchievement}</p>
+        <div class="sm:mb-0 mb-1    ">
+            <p class="h-4 whitespace-pre pt-0 tracking-wide text-yellow-achievement sm:h-[19px] sm:pt-0">¡Logro  completado!
+            </p>
+            <p class="mt-1 h-4 whitespace-pre pt-0 sm:pt-1 tracking-wide sm:h-[19px]">{randomAchievement}
+            </p>
         </div>
     </div>
 </div>
 
 <script>
-
     const toast = document.getElementById("toast");
 
     function laucherToast() {
-        setTimeout(function() {
-
-            toast?.classList.add("flex", "animate-slide-enter-achievement")
+        setTimeout(function () {
+            toast?.classList.add("flex", "animate-slide-enter-achievement");
             toast?.classList.remove("hidden");
-
         }, 3000);
     }
 
     function closeToast() {
-        setTimeout(function() {
+        setTimeout(function () {
             toast?.classList.remove("animate-slide-enter-achievement");
-            toast?.classList.add("animate-slide-exit-achievement")
-            
+            toast?.classList.add("animate-slide-exit-achievement");
         }, 8000);
     }
 
     function hiideToast() {
-        setTimeout(function() {
-
-            toast?.classList.add("hidden")
+        setTimeout(function () {
+            toast?.classList.add("hidden");
             toast?.classList.remove("flex");
-
         }, 8600);
     }
 
     laucherToast();
     closeToast();
     hiideToast();
-
 </script>
