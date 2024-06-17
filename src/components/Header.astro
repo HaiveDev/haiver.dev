@@ -13,18 +13,25 @@ const links = [
     { text: `${i18n.HEADER.NAVBAR.HOME}`, url: `/${ruta}#${i18n.HEADER.NAVBAR.HOME}` },
     { text: `${i18n.HEADER.NAVBAR.EXPERIENCE}`, url: `/${ruta}#${i18n.HEADER.NAVBAR.EXPERIENCE}` },
     { text: `${i18n.HEADER.NAVBAR.PROJECTS}`, url: `/${ruta}#${i18n.HEADER.NAVBAR.PROJECTS}` },
-    { text: 'Blog', url: '/blog' }
   ];
 ---
 
-<header class="sticky z-10 top-0 pt-4 w-full flex justify-center">
+<header class="sticky z-10 top-0 pt-4 w-full md:flex justify-center text-color-primary hidden">
     
-    <nav class="space-x-1 backdrop-blur flex items-center rounded-md bg-black/10 px-3 py-1  animate-fade-in animate-delay-100">
+    <nav class="space-x-1 backdrop-blur-md bg-color-blur flex items-center rounded-md border border-gray-border px-3 py-1">
         
-    {links.map((link) => (
-        <a class="rounded-md capitalize px-3 py-0.5 transition-all ease-in-out hover:bg-white/10" href={link.url}>
-            {link.text}
-        </a>
-    ))}
+        {links.map((link) => (
+            <a class="rounded-md capitalize px-3 py-0.5 transition-all ease-in-out hover:bg-white/5" href={link.url}>
+                {link.text}
+            </a>
+        ))}
+        <span class="text-color-subtle font-light text-xl" >|</span>
+        <a class="rounded-md capitalize px-3 py-0.5 transition-all ease-in-out hover:bg-white/5" href='/blog'>
+            Blog
+        </a>    
+        <a class="rounded-md capitalize px-3 py-0.5 transition-all ease-in-out hover:bg-white/5" href='/stack'>
+            Stack
+        </a>    
     </nav>
+    
 </header>

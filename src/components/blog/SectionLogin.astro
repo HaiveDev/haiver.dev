@@ -1,28 +1,55 @@
 ---
 import {
-IconLogin2,
-IconBrandGoogle,
-IconBrandGithub,
+    IconBrandGithub,
 } from "@tabler/icons-react";
 
 import { SignIn } from "auth-astro/components";
 ---
 
-<div class="relative rounded-md border-2 border-white/20 bg-white/5 p-3">
-    <div class="absolute right-0 top-0 m-2">
-        <span class="relative flex h-2 w-2">
-            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-            <span class="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
-        </span>
-    </div>
-    <h2 class="flex items-center justify-center space-x-2">
+<div id="formLogin" class=" rounded-md border border-gray-border bg-[#ffffff05] p-3">
+    <h2 class="flex items-center justify-center space-x-2 text-color-primary">
         <span class="text-center text-base font-bold">Inicia sesión</span>
     </h2>
     <div class="mt-4 flex flex-col space-y-2">
-        <SignIn provider="github"
-            class="flex items-center justify-center space-x-2 rounded-md border-white/40 bg-white/15 px-3 py-2 text-sm font-semibold transition-all hover:bg-white/20">
+        <SignIn id="btnLogin" provider="github"
+            class="flex items-center justify-center space-x-2 rounded-md bg-[#ffffff05] px-3 py-2 text-sm font-semibold text-color-secondary transition-all hover:bg-white/5">
             <IconBrandGithub width={20} height={20} />
             <span>Iniciar con Github</span>
         </SignIn>
     </div>
 </div>
+<div id="loading" class=" hidden mx-auto w-full max-w-sm rounded-md border border-gray-border bg-white/5 p-3">
+    <div class="flex animate-pulse items-center space-x-2">
+        <div class="h-12 w-12 rounded-md bg-white/10"></div>
+        <div class="flex-1 space-y-2">
+            <div class="grid grid-cols-5 gap-2">
+                <div class="col-span-2 h-3 rounded bg-white/10"></div>
+            </div>
+            <div class="grid grid-cols-5 gap-2">
+                <div class="col-span-4 h-2 rounded bg-white/10"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener(
+        "astro:page-load",
+        () => {
+            
+            const btnLogin = document.getElementById("btnLogin");
+            const formLogin = document.getElementById("formLogin");
+            const loading = document.getElementById("loading");
+            
+            if (btnLogin && formLogin && loading) {
+                btnLogin.addEventListener("click", function (event) {
+                    formLogin.classList.toggle("hidden");
+                    loading.classList.toggle("hidden");
+                    event.stopPropagation();
+                });
+            }
+        },
+        { once: false },
+    );
+   
+</script>

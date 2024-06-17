@@ -13,32 +13,34 @@ const session = await getSession(Astro.request);
 
 <LayoutBlog title="Blog de Haiver">
     <main class="px-4">
-        <h1 class="mb-2 mt-20 flex items-center justify-center space-x-4">
-            <span class="text-2xl font-extrabold sm:text-3xl md:text-4xl lg:text-5xl">
-                Proximamente
-            </span>
-            <IconSparkles className="h-full w-8 md:w-10 lg:w-14" />
-        </h1>
-        <p class="text-pretty text-center text-white/50">
-            Blog en desarrollo, pronto estará disponible para todos!
-        </p>
-        <SectionContainerBlog class="mt-20 justify-center gap-4 md:flex">
-            <section class="w-full md:w-[784px]">
-                <HistoryPots />
-            </section>
-            <section class="sticky top-20 mt-6 h-min w-full flex-shrink-0 md:mt-0 md:w-[336px] md:-translate-y-2.5">
-                {session ?
-                <SectionAccount /> :
-                <SectionLogin />}
-
-                <div class="mt-4 rounded-md border-2 border-white/20 bg-white/5 p-3">
-                    <h2 class="flex items-center justify-center space-x-2">
-                        <span class="text-center text-base font-bold">Categorías</span>
-                        <IconLayout2 width={16} height={16} />
-                    </h2>
-                    <BadgeCategorys />
-                </div>
-            </section>
+        <SectionContainerBlog class="mt-10 md:mt-20">
+            <h1 class="mb-2 flex items-center justify-center space-x-4 text-color-primary">
+                <span class="font-black text-4xl xl:text-5xl">
+                    Mi blog
+                </span>
+                <IconSparkles className="h-full w-8 md:w-10 text-amber-300" />
+            </h1>
+            <p class="text-pretty [&>strong]:text-color-secondary text-center text-color-subtle">
+                <strong>Blog en desarrollo,</strong> ¡Estará disponible muy pronto!
+            </p>
+            <div class="mt-20 flex flex-col justify-center gap-4 md:flex-row">
+                <section class="order-2 w-full md:order-1 md:w-[784px]">
+                    <HistoryPots />
+                </section>
+                <section
+                    class="top-20 order-1 mb-6 h-min shrink-0 md:sticky md:order-2 md:mb-0 md:w-[336px] md:-translate-y-2.5">
+                    {session ?
+                    <SectionAccount /> :
+                    <SectionLogin />}
+                    <div class="mt-4 rounded-md border border-gray-border p-3 bg-[#ffffff05]">
+                        <h2 class="flex items-center justify-center space-x-2 text-color-primary">
+                            <span class="text-center text-base font-bold">Categorías</span>
+                            <IconLayout2 width={16} height={16} />
+                        </h2>
+                        <BadgeCategorys />
+                    </div>
+                </section>
+            </div>
         </SectionContainerBlog>
     </main>
 </LayoutBlog>

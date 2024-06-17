@@ -45,32 +45,32 @@ export const DataPost = [
 <div
     class="relative sm:pb-12 sm:ml-[calc(2rem+1px)] md:ml-[calc(3.5rem+1px)] lg:ml-[max(calc(14.5rem+1px),calc(100%-48rem))]">
     <div
-        class="absolute top-3 bottom-0 right-full mr-7 md:mr-[3.20rem] border border-white/20 sm:block">
+        class="absolute top-3 bottom-0 right-full mr-7 md:mr-[3.20rem] border border-e-0 border-t-0 border-b-0 border-gray-border sm:block">
     </div>
     <div class="space-y-16">
         {DataPost.map((DataPost) => (
             <article class="relative group">
                 <div
-                    class="absolute -inset-y-2.5 -inset-x-0 rounded-md border-2 border-white/20 bg-white/5 group-hover:bg-white/10 transition-all ">
+                    class="absolute -inset-y-2.5 -inset-x-0 rounded-md border border-gray-border group-hover:bg-[#ffffff05] transition-all ">
                 </div>
-                <IconPointFilled className='hidden absolute right-full mr-4 text-gray-400 md:mr-10 w-6 h-6 overflow-visible sm:block' />
+                <IconPointFilled className='hidden absolute right-full mr-4 text-color-primary md:mr-10 w-6 h-6 overflow-visible sm:block' />
                 <div class="relative px-4">
-                    <h3 class="line-clamp-2 text-lg font-bold pt-8 lg:pt-0">
+                    <h3 class="line-clamp-2 text-lg font-bold pt-8 lg:pt-0 text-color-primary">
                         {DataPost.title}
                     </h3>
-                    <div class="mt-2 mb-4 line-clamp-2 text-pretty">
+                    <div class="mt-2 mb-4 line-clamp-2 text-pretty text-color-secondary">
                         <p>
                             {DataPost.description}
                         </p>
                     </div>
                     <div class="absolute left-0 top-0 ms-4 lg:ms-0 lg:left-auto lg:right-full lg:mr-24">
                     
-                        <span class="whitespace-nowrap text-sm leading-6 text-white/50">
+                        <span class="whitespace-nowrap text-sm leading-6 text-color-subtle">
                             <time>{DataPost.date}</time>
                         </span>
                     </div>
                     
-                    <a class="text-sm text-white/50 font-medium group-hover:text-white" href={DataPost.link}>
+                    <a class="text-sm text-color-subtle font-medium group-hover:text-color-primary" href={DataPost.link}>
                         <span class="group-hover:animate-move-left flex items-center">¡Explora más!
                             <IconChevronRight stroke={2.5} className='h-full w-4 overflow-visible ml-1' />
                         </span>

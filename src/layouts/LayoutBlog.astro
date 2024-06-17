@@ -1,10 +1,8 @@
 ---
-import { pwaInfo } from 'virtual:pwa-info';
-
 import { ViewTransitions } from "astro:transitions";
 import Header from "@/components/Header.astro";
+import BottomNavbar from "@/components/BottomNavbar.astro";
 import FooterBlog from "@/components/blog/FooterBlog.astro";
-import ScrollToTopButton from "@/components/ScrollTopBtn";
 import { getI18N } from "@/i18n";
 
 interface Props {
@@ -51,31 +49,18 @@ const i18n = getI18N({ currentLocale });
     <meta name="language" content="Spanish" />
     <meta name="robots" content="index, follow" />
     <meta name="revisit-after" content="7 days" />
-    <meta name="theme-color" content="#21272a">
-    { pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} /> }
-    <script src="/src/pwa.ts"></script>
+    <meta name="theme-color" content="#222222">
     <ViewTransitions />
 </head>
 
-<body class="relative bg-neutral-950 text-white selection:bg-purple-200/20 selection:text-gray-400">
-    <div class="pointer-events-none absolute h-screen object-cover">
-        <img src="/backgroundBlog.webp" alt="background"
-            class="fixed h-screen w-screen object-cover opacity-20 blur-3xl" />
-    </div>
-    <svg class="pointer-events-none fixed isolate z-50 h-full w-full opacity-70 mix-blend-soft-light">
-        <filter id="noise">
-            <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="4" stitchTiles="stitch"></feTurbulence>
-        </filter>
-        <rect width="100%" height="100%" filter="url(#noise)"></rect>
-    </svg>
-
+<body class="relative bg-color-background selection:bg-gray-200/20">
     <div class="relative z-10">
         <Header />
+        <BottomNavbar />
 
         <slot />
 
         <FooterBlog />
-        <ScrollToTopButton client:load />
     </div>
     <style is:global>
         @font-face {
@@ -101,7 +86,7 @@ const i18n = getI18N({ currentLocale });
         }
 
         ::-webkit-scrollbar-track {
-            background: rgb(10, 10, 10);
+            background: rgb(34, 34, 34);
             backdrop-filter: blur(10px);
             border-radius: 5px;
         }

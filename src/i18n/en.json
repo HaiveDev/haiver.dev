@@ -10,8 +10,8 @@
         }
     },
 
-    "PRESENTATION_TITLE": "Haiver Rueda",
-    "PRESENTATION_DESCRIPTION": "Web Developer",
+    "PRESENTATION_TITLE": "haiver.dev",
+    "PRESENTATION_DESCRIPTION": "Web Developer 🍂",
 
     "TAG_CHAMBA": "Available for new projects",
 
@@ -21,20 +21,26 @@
 
         "EXPERIENCES": [
             {
-                "POSITION": "FrontEnd Developer",
-                "DESCRIPTION": "Collaborating on the front-end development of a government website using WordPress. Additionally, I am working on my personal blog where I will share ideas, experiences, and tips related to the world of development and technology.",
-                "TIMEFRAME": "Currently"
+                "POSITION": "Frontend Developer - Energuaviare SA ESP",
+                "DESCRIPTION": "Continue with frontend development of the requests and help desk system. Also, currently developing a website for a travel agency (BiodiversoTravel).",
+                "TIMEFRAME": "Present"
+            },
+            {
+                "POSITION": "Frontend Developer",
+                "DESCRIPTION": "Collaborated in the development of a governmental website using WordPress.",
+                "TIMEFRAME": "01/2024 - 02/2024"
             },
             {
                 "POSITION": "UX/UI Designer",
-                "DESCRIPTION": "Designed a business directory, starting from sketches and mockups to interactivity in Figma. Focus on responsive design.",
+                "DESCRIPTION": "Designed a commercial directory, from sketches and mockups to interactivity in Figma. Focus on responsive design.",
                 "TIMEFRAME": "11/2023"
             },
             {
-                "POSITION": "FrontEnd Developer - Energuaviare SA ESP",
-                "DESCRIPTION": "Developed the front-end of a feasibility system in vanilla JavaScript. Additionally, I fully created a web application for an internal helpdesk, incorporating an administrative panel with a minimalist interface in Angular and stylized with Tailwind CSS, backed by an SQLite database.",
+                "POSITION": "Frontend Developer - Energuaviare SA ESP",
+                "DESCRIPTION": "Developed the frontend of a requests system using vanilla JavaScript, JQuery, and Bootstrap. Also, completely created a web application for an internal help desk using Angular, Tailwind CSS, and SQLite.",
                 "TIMEFRAME": "04/2023 - 10/2023"
             }
+            
         ]
     },    
 
@@ -42,7 +48,6 @@
         "AUTHOR": [
             "Developed with",
             "by Haiver"
-        ],
-        "COPYRIGHT": "All rights reserved... I think."
+        ]
     }
 }

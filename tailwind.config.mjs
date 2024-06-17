@@ -10,6 +10,13 @@ export default {
         Minecraft: ["minecraft", "sans-serif"],
       },
       colors:{
+        'color-background': '#222222',
+        'color-primary': '#EEEEEE',
+        'color-secondary': '#BBBBBB',
+        'color-subtle': '#888888',
+        'color-blur':'#222222d1',
+
+        'gray-border': '#ffffff1a',
         'yellow-achievement' : '#ffff00'
       },
       "animation": {
