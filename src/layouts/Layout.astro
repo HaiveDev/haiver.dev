@@ -1,0 +1,108 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import Header from "@/components/Header.astro";
+import BottomNavbar from "@/components/BottomNavbar.astro";
+import Footer from "@/components/Footer.astro";
+import { getI18N } from "@/i18n";
+
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+---
+
+<!doctype html>
+<html lang="es" class="dark">
+
+<head>
+    <title>{title}</title>
+
+    <meta name="title" content={title} />
+    <meta charset="UTF-8" />
+    <meta name="description" content={i18n.SEO_DESCRIPTION} />
+    <meta name="keywords"
+        content="Haiver, ImHaiver, haiver.dev, Desarrollador, Developer, Frontend Developer, Desarrollador Frontend, Portafolio, Portafolio Haiver, Pagina Haiver, Haiver's webpage,  Blog, Blog de haiver, Blog's Haiver, Desarrollo web" />
+    <meta name="author" content="Haiver" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="icons/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://haiver.dev/" />
+    <meta property="og:owners" content="Haiver" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={i18n.SEO_DESCRIPTION} />
+    <meta property="og:image" content="/banner.webp" />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://haiver.dev/" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={i18n.SEO_DESCRIPTION} />
+    <meta property="twitter:image" content="/banner.webp" />
+
+    <meta name="url" content="https://haiver.dev/" />
+    <meta name="audience" content="all" />
+    <meta name="language" content="Spanish" />
+    <meta name="robots" content="index, follow" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="theme-color" content="#222222cls" />
+    
+    <ViewTransitions />
+</head>
+
+<body class="relative bg-color-background selection:bg-gray-200/20" id=`${i18n.HEADER.NAVBAR.HOME}`>
+    
+        <Header />
+        <BottomNavbar />
+
+        <slot />
+
+        <Footer />
+
+    <style is:global>
+
+        @font-face {
+            font-family: "mona-sans";
+            src:
+                url("/fonts/Mona-Sans.woff2") format("woff2"),
+                url("/fonts/Mona-Sans.ttf") format("truetype");
+        }
+
+        html {
+            font-family: mona-sans, system-ui, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgb(34, 34, 34);
+            backdrop-filter: blur(10px);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: hsla(0, 0%, 100%, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</body>
+
+</html>

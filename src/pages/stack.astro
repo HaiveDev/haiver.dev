@@ -1,0 +1,44 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import Hardware from "@/components/Hardware.astro";
+import Software from "@/components/Software.astro";
+
+import { IconStack2 } from "@tabler/icons-react";
+---
+
+<Layout title="stack - haiver.dev">
+    <main class="px-4">
+
+        <SectionContainer class="mt-10 md:mt-20">
+            <h1 class="mb-2 flex items-center space-x-4 text-color-primary">
+                <span class="font-black text-4xl xl:text-5xl">
+                    Mi stack
+                </span>
+                <IconStack2 className="h-full w-8 md:w-10 text-purple-300" />
+            </h1>
+            <p class="text-pretty text-color-subtle">
+                Descubre las herramientas y tecnologías que utilizo y recomiendo, desde el software que manejo hasta el hardware que me acompaña en mis proyectos.
+            </p>
+
+            <section class="mt-20 md:pt-16">
+                <h2 class="mb-4 capitalize">
+                    <span class="text-2xl font-semibold sm:text-3xl text-color-primary">
+                        Hardware
+                    </span>
+                </h2>
+                <Hardware />
+            </section>
+            <section class="mt-20 md:pt-16">
+
+                <h2 class="mb-4 capitalize">
+                    <span class="text-2xl font-semibold sm:text-3xl text-color-primary">
+                        Software
+                    </span>
+                </h2>
+                <Software />
+            </section>
+        </SectionContainer>
+    </main>
+
+</Layout>

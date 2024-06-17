@@ -1,0 +1,32 @@
+---
+import { IconHeart, IconHeartFilled } from "@tabler/icons-react"
+import { getI18N } from "@/i18n"
+
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+
+var year = new Date().getFullYear();
+---
+
+<footer class="mx-auto mt-auto w-full px-4 text-sm xl:px-0 text-color-secondary mb-20 md:mb-0">
+    <div class="mx-auto w-full py-6 xl:w-[1120px]">
+        
+        <div class="text-center sm:flex sm:items-center sm:justify-between border-t pt-6 border-gray-border">
+            <p>© {year} - Haiver Rueda</p>
+
+            <p class="flex items-center justify-center text-center mt-2 sm:mt-0">
+                {i18n.FOOTER.AUTHOR[0]}
+                <span class="group"> 
+                    <IconHeart width={16} className="mx-1 group-hover:hidden" />
+                    <IconHeartFilled width={16} className="mx-1 text-red-500 hidden group-hover:block animate-heartbeat animate-iteration-count-infinite animate-duration-800" />
+                </span>
+                &
+                <span>
+                    <a class="mx-1 transition-all hover:text-yellow-500 hover:underline" target="_blank"
+                        href="https://astro.build/" rel="noreferrer">Astro</a>
+                </span>
+                {i18n.FOOTER.AUTHOR[1]}
+            </p>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,92 @@
+---
+// Importaciones
+import {IconLogout, IconDots, IconBookmarks} from "@tabler/icons-react";
+/* import {SignOut} from "auth-astro/components";
+import {getSession} from "auth-astro/server";
+
+const session = await getSession(Astro.request); */
+---
+
+<div class="relative rounded-md border border-gray-border bg-[#ffffff05] p-3">
+    <div class="absolute right-0 top-0 m-3">
+        <button id="menuButton"
+            class="dropdown-button rounded-md px-1 py-1 text-color-secondary transition-all hover:bg-[#ffffff05] hover:text-color-primary">
+            <IconDots width={16} height={16} />
+        </button>
+        <div id="dropdownMenu"
+            class="absolute right-0 z-10 mt-2 hidden w-max rounded-md border border-gray-border backdrop-blur-md bg-color-blur p-1 shadow-xl">
+            <a href="#"
+                class="flex w-full items-center justify-between rounded-md px-2.5 py-2 text-sm text-color-secondary gap-2 transition-all hover:bg-yellow-500/5 hover:text-yellow-500">
+                <span>Posts guardados</span>
+                <IconBookmarks width={16} height={16} />
+            </a>
+            <button
+                class="flex w-full items-center justify-between rounded-md px-2.5 py-2 text-sm text-color-secondary gap-2 transition-all hover:bg-red-400/5 hover:text-red-400">
+                <span>Cerrar sesión</span>
+                <IconLogout width={16} height={16} />
+            </button>
+            <!-- <SignOut
+                class="flex w-full items-center justify-between rounded-md px-2.5 py-2 text-sm text-color-secondary gap-2 transition-all hover:bg-red-400/5 hover:text-red-400">
+                <span>Cerrar sesión</span>
+                <IconLogout width={16} height={16} />
+            </SignOut> -->
+        </div>
+    </div>
+    <!-- <div class="flex items-center space-x-2">
+        <img class="h-12 w-12 rounded-md" src={session?.user?.image} alt=`foto de perfil de ${session?.user?.name}` />
+        <div class="text-left">
+            <p class="text-sm font-bold text-color-primary">{session?.user?.name}</p>
+            <p class="text-xs text-color-subtle">{session?.user?.email}</p>
+        </div>
+    </div> -->
+</div>
+
+
+<style>
+    #dropdownMenu.open {
+        animation: scale-up-center 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
+  
+    @keyframes scale-up-center {
+      from {
+        transform: scale(0.5);
+        opacity: 1;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+
+<script>
+    document.addEventListener(
+        "astro:page-load",
+        () => {
+            const button = document.getElementById("menuButton");
+            const menu = document.getElementById("dropdownMenu");
+
+            if (menu && button) {
+                button.addEventListener("click", function (event) {
+                    menu.classList.toggle("hidden");
+                    menu.classList.toggle("open");
+                    event.stopPropagation();
+                });
+
+                document.addEventListener("click", function () {
+                    if (menu && !menu.classList.contains("hidden")) {
+                        menu.classList.add("hidden");
+                        menu.classList.remove("open");
+                    }
+                });
+
+                menu.addEventListener("click", function (event) {
+                    menu.classList.add("hidden");
+                    menu.classList.remove("open");
+                    event.stopPropagation();
+                });
+            }
+        },
+        { once: false },
+    );
+</script>

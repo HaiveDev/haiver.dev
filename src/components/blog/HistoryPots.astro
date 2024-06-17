@@ -1,0 +1,85 @@
+---
+import { IconPointFilled, IconChevronRight } from '@tabler/icons-react'
+
+export const DataPost = [
+    {
+        date: 'Enero 5, 2024',
+        title: 'Desarrollo Web Moderno: Principales Tendencias del 2024',
+        description: 'Explora las últimas tendencias y tecnologías en el desarrollo web. Descubre cómo la inteligencia artificial, la realidad aumentada y otras innovaciones están transformando la industria.',
+        link: '/'
+    },
+    {
+        date: 'Noviembre 23, 2023',
+        title: 'Optimización de Rendimiento en Sitios Web: Consejos Prácticos',
+        description: 'Aprende estrategias efectivas para mejorar el rendimiento de tu sitio web. Desde la compresión de imágenes hasta la implementación de técnicas de carga diferida, aquí tienes todo lo que necesitas saber.',
+        link: '/'
+    },
+    {
+        date: 'Septiembre 25, 2023',
+        title: 'Desarrollo Ágil: Cómo Implementar Metodologías en tu Equipo',
+        description: 'Descubre los beneficios del desarrollo ágil y aprende a implementar metodologías como Scrum y Kanban en tu equipo. Mejora la eficiencia y la colaboración en tus proyectos de desarrollo.',
+        link: '/'
+    },
+    {
+        date: 'Junio 29, 2023',
+        title: 'Seguridad en Desarrollo Web: Prácticas Esenciales para Proteger tus Aplicaciones',
+        description: 'Conoce las mejores prácticas de seguridad en el desarrollo web. Desde la autenticación de dos factores hasta las auditorías de código, descubre cómo proteger tus aplicaciones contra amenazas cibernéticas.',
+        link: '/'
+    },
+    {
+        date: 'Junio 2, 2023',
+        title: 'Introducción a GraphQL: Mejorando la Eficiencia en tus APIs',
+        description: 'Aprende los fundamentos de GraphQL y cómo esta tecnología puede mejorar la eficiencia en el manejo de datos en tus APIs. Descubre casos de uso prácticos y ejemplos de implementación.',
+        link: '/'
+    },
+    {
+        date: 'Marzo 18, 2023',
+        title: 'Diseño Responsivo: Garantizando una Experiencia Óptima en Todos los Dispositivos',
+        description: 'Explora estrategias de diseño responsivo para garantizar una experiencia de usuario óptima en dispositivos de diferentes tamaños. Consejos prácticos y ejemplos de implementación.',
+        link: '/'
+    }
+];
+
+---
+
+<div
+    class="relative sm:pb-12 sm:ml-[calc(2rem+1px)] md:ml-[calc(3.5rem+1px)] lg:ml-[max(calc(14.5rem+1px),calc(100%-48rem))]">
+    <div
+        class="absolute top-3 bottom-0 right-full mr-7 md:mr-[3.20rem] border border-e-0 border-t-0 border-b-0 border-gray-border sm:block">
+    </div>
+    <div class="space-y-16">
+        {DataPost.map((DataPost) => (
+            <article class="relative group">
+                <div
+                    class="absolute -inset-y-2.5 -inset-x-0 rounded-md border border-gray-border group-hover:bg-[#ffffff05] transition-all ">
+                </div>
+                <IconPointFilled className='hidden absolute right-full mr-4 text-color-primary md:mr-10 w-6 h-6 overflow-visible sm:block' />
+                <div class="relative px-4">
+                    <h3 class="line-clamp-2 text-lg font-bold pt-8 lg:pt-0 text-color-primary">
+                        {DataPost.title}
+                    </h3>
+                    <div class="mt-2 mb-4 line-clamp-2 text-pretty text-color-secondary">
+                        <p>
+                            {DataPost.description}
+                        </p>
+                    </div>
+                    <div class="absolute left-0 top-0 ms-4 lg:ms-0 lg:left-auto lg:right-full lg:mr-24">
+                    
+                        <span class="whitespace-nowrap text-sm leading-6 text-color-subtle">
+                            <time>{DataPost.date}</time>
+                        </span>
+                    </div>
+                    
+                    <a class="text-sm text-color-subtle font-medium group-hover:text-color-primary" href={DataPost.link}>
+                        <span class="group-hover:animate-move-left flex items-center">¡Explora más!
+                            <IconChevronRight stroke={2.5} className='h-full w-4 overflow-visible ml-1' />
+                        </span>
+                        <span class="absolute -inset-y-2.5 -inset-x-0 rounded-md animate-none"></span> 
+                    </a>
+                </div>
+            </article>
+        ))}
+        
+
+    </div>
+</div>

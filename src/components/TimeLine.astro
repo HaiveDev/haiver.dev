@@ -1,0 +1,47 @@
+---
+import { IconCircleFilled, IconCalendar } from "@tabler/icons-react";
+
+import { getI18N } from "@/i18n"
+
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+
+const dataTimeLine = [
+    {
+       title: `${ i18n.SECTION_XP.EXPERIENCES[0].POSITION }`,
+       description: `${ i18n.SECTION_XP.EXPERIENCES[0].DESCRIPTION }`,
+       fecha: `${ i18n.SECTION_XP.EXPERIENCES[0].TIMEFRAME }` 
+    },
+    {
+       title: `${ i18n.SECTION_XP.EXPERIENCES[1].POSITION }`,
+       description: `${ i18n.SECTION_XP.EXPERIENCES[1].DESCRIPTION }`,
+       fecha: `${ i18n.SECTION_XP.EXPERIENCES[1].TIMEFRAME }` 
+    },
+    {
+       title: `${ i18n.SECTION_XP.EXPERIENCES[2].POSITION }`,
+       description: `${ i18n.SECTION_XP.EXPERIENCES[2].DESCRIPTION }`,
+       fecha: `${ i18n.SECTION_XP.EXPERIENCES[2].TIMEFRAME }` 
+    },
+    {
+       title: `${ i18n.SECTION_XP.EXPERIENCES[3].POSITION }`,
+       description: `${ i18n.SECTION_XP.EXPERIENCES[3].DESCRIPTION }`,
+       fecha: `${ i18n.SECTION_XP.EXPERIENCES[3].TIMEFRAME }` 
+    } 
+]
+---
+
+<div class="ms-1.5 space-y-6 border-l border-gray-border">
+    {dataTimeLine.map((dataTimeLine) => (
+        <div class="relative w-full">
+            <IconCircleFilled className="absolute z-10 mt-2 -ml-[7px] h-3 w-3 text-color-primary"/>
+            <div class="ml-6">
+                <h4 class="font-bold text-lg text-color-primary">{dataTimeLine.title}</h4>
+                <p class="text-pretty mt-2 text-base text-color-secondary">{dataTimeLine.description}</p>
+                <p class="mt-1 text-sm text-color-subtle flex gap-1 items-center">
+                    <IconCalendar width={20} />
+                    -<span>{dataTimeLine.fecha}</span>
+                </p>
+            </div>
+        </div>
+    ))}
+</div>
