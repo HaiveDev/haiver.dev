@@ -6,9 +6,6 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
-      fontFamily: {
-        Minecraft: ["minecraft", "sans-serif"],
-      },
       colors:{
         'color-background': '#222222',
         'color-primary': '#EEEEEE',
@@ -16,8 +13,7 @@ export default {
         'color-subtle': '#888888',
         'color-blur':'#222222d1',
 
-        'gray-border': '#ffffff1a',
-        'yellow-achievement' : '#ffff00'
+        'gray-border': '#ffffff1a'
       },
       "animation": {
         "background-shine": "background-shine 3s linear infinite",

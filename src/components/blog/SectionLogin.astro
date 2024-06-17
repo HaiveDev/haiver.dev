@@ -3,7 +3,7 @@ import {
     IconBrandGithub,
 } from "@tabler/icons-react";
 
-import { SignIn } from "auth-astro/components";
+/* import { SignIn } from "auth-astro/components"; */
 ---
 
 <div id="formLogin" class=" rounded-md border border-gray-border bg-[#ffffff05] p-3">
@@ -11,11 +11,16 @@ import { SignIn } from "auth-astro/components";
         <span class="text-center text-base font-bold">Inicia sesión</span>
     </h2>
     <div class="mt-4 flex flex-col space-y-2">
-        <SignIn id="btnLogin" provider="github"
+        <button id="btnLogin"
             class="flex items-center justify-center space-x-2 rounded-md bg-[#ffffff05] px-3 py-2 text-sm font-semibold text-color-secondary transition-all hover:bg-white/5">
             <IconBrandGithub width={20} height={20} />
             <span>Iniciar con Github</span>
-        </SignIn>
+        </button>
+        <!-- <SignIn id="btnLogin" provider="github"
+            class="flex items-center justify-center space-x-2 rounded-md bg-[#ffffff05] px-3 py-2 text-sm font-semibold text-color-secondary transition-all hover:bg-white/5">
+            <IconBrandGithub width={20} height={20} />
+            <span>Iniciar con Github</span>
+        </SignIn> -->
     </div>
 </div>
 <div id="loading" class=" hidden mx-auto w-full max-w-sm rounded-md border border-gray-border bg-white/5 p-3">

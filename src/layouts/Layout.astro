@@ -1,13 +1,12 @@
 ---
 import { ViewTransitions } from "astro:transitions";
-import Achievement from "@/components/Achievement.astro"
 import Header from "@/components/Header.astro";
 import BottomNavbar from "@/components/BottomNavbar.astro";
 import Footer from "@/components/Footer.astro";
 import { getI18N } from "@/i18n";
 
 interface Props {
-title: string;
+    title: string;
 }
 
 const { title } = Astro.props;
@@ -55,21 +54,16 @@ const i18n = getI18N({ currentLocale });
     <ViewTransitions />
 </head>
 
-<body class="relative bg-color-background selection:bg-gray-200/20">
-    <div class="relative z-10" id=`${i18n.HEADER.NAVBAR.HOME}`>
-        <Achievement />
+<body class="relative bg-color-background selection:bg-gray-200/20" id=`${i18n.HEADER.NAVBAR.HOME}`>
+    
         <Header />
         <BottomNavbar />
 
         <slot />
 
         <Footer />
-    </div>
+
     <style is:global>
-        @font-face {
-            font-family: "minecraft";
-            src: url("/fonts/Minecraft.ttf") format("truetype");
-        }
 
         @font-face {
             font-family: "mona-sans";

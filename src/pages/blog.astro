@@ -3,12 +3,12 @@ import LayoutBlog from "@/layouts/LayoutBlog.astro";
 import SectionContainerBlog from "@/components/blog/SectionContainerBlog.astro";
 import HistoryPots from "@/components/blog/HistoryPots.astro";
 import SectionLogin from "@/components/blog/SectionLogin.astro";
-import SectionAccount from "@/components/blog/SectionAccount.astro";
+/* import SectionAccount from "@/components/blog/SectionAccount.astro"; */
 import BadgeCategorys from "@/components/blog/BadgeCategorys.astro";
 import { IconSparkles, IconLayout2 } from "@tabler/icons-react";
 
-import { getSession } from "auth-astro/server";
-const session = await getSession(Astro.request);
+/* import { getSession } from "auth-astro/server";
+const session = await getSession(Astro.request); */
 ---
 
 <LayoutBlog title="Blog de Haiver">
@@ -29,9 +29,13 @@ const session = await getSession(Astro.request);
                 </section>
                 <section
                     class="top-20 order-1 mb-6 h-min shrink-0 md:sticky md:order-2 md:mb-0 md:w-[336px] md:-translate-y-2.5">
-                    {session ?
+                    
+                    <SectionLogin />
+
+                    <!-- {session ?
                     <SectionAccount /> :
-                    <SectionLogin />}
+                    <SectionLogin />} -->
+
                     <div class="mt-4 rounded-md border border-gray-border p-3 bg-[#ffffff05]">
                         <h2 class="flex items-center justify-center space-x-2 text-color-primary">
                             <span class="text-center text-base font-bold">Categorías</span>
