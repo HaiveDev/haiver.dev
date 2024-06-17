@@ -10,10 +10,10 @@
         }
     },
 
-    "PRESENTATION_TITLE": "Haiver Rueda",
-    "PRESENTATION_DESCRIPTION": "Desarrollador web",
+    "PRESENTATION_TITLE": "haiver.dev",
+    "PRESENTATION_DESCRIPTION": "Desarrollador web 🍃",
     
-    "TAG_CHAMBA": "Disponible a nuevos proyectos",
+    "TAG_CHAMBA": "Disponible para nuevos proyectos",
 
     "PARAGRAPH_DESCRIPTION": "Con perspectiva fresca y moderna, dispuesto a enfrentar desafíos con creatividad y determinación.",
 
@@ -22,20 +22,26 @@
 
         "EXPERIENCES": [
             {
-                "POSITION": "Desarrollador FrontEnd",
-                "DESCRIPTION": "Colaborando en el desarrollo front-end de una página gubernamental con WordPress. Además, estoy trabajando en mi blog personal, donde compartiré ideas, experiencias y consejos relacionados con el mundo del desarrollo y la tecnología.",
+                "POSITION": "Desarrollador Frontend - Energuaviare SA ESP",
+                "DESCRIPTION": "Continúe con el desarrollo frontend del sistema de solicitudes y mesa de ayuda. También estoy desarrollando un sitio web para una agencia de viajes (BiodiversoTravel).",
                 "TIMEFRAME": "Actualmente"
             },
             {
+                "POSITION": "Desarrollador Frontend",
+                "DESCRIPTION": "Colaboré en el desarrollo de un sitio web gubernamental con WordPress.",
+                "TIMEFRAME": "01/2024 - 02/2024"
+            },
+            {
                 "POSITION": "Diseñador UX/UI",
-                "DESCRIPTION": "Diseñé un directorio comercial, partiendo desde bocetos y maquetas hasta la interactividad en Figma. Enfoque en diseño responsive.",
+                "DESCRIPTION": "Diseñé un directorio comercial, desde bocetos y maquetas hasta la interactividad en Figma. Enfoque en diseño responsivo.",
                 "TIMEFRAME": "11/2023"
             },
             {
-                "POSITION": "Desarrollador FrontEnd - Energuaviare SA ESP",
-                "DESCRIPTION": "Desarrollé el front-end de un sistema de factibilidades en vanilla JavaScript. Además, creé por completo una aplicación web para una mesa de ayuda interna, incorporando un panel administrativo con una interfaz minimalista en Angular y estilizada con Tailwind CSS, respaldada por una base de datos SQLite.",
+                "POSITION": "Desarrollador Frontend - Energuaviare SA ESP",
+                "DESCRIPTION": "Desarrollé el frontend de un sistema de solicitudes en vanilla JavaScript, JQuery y Bootstrap. Además, creé completamente una aplicación web para una mesa de ayuda interna usando Angular, Tailwind CSS y SQLite.",
                 "TIMEFRAME": "04/2023 - 10/2023"
             }
+            
         ]
     },
     
@@ -43,7 +49,6 @@
         "AUTHOR": [
             "Desarrollado con",
             "por Haiver"
-        ],
-        "COPYRIGHT": "Todos los derechos reservados... creo."
+        ]
     }
 }

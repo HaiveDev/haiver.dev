@@ -1,0 +1,15 @@
+---
+const { class: className, href, name } = Astro.props
+
+---
+<span class="relative group/tooltip">
+
+    <a class={`${className}  transition-all flex items-center text-xs text-color-secondary  space-x-2 rounded-md  px-2.5 py-1`} target="_blank" href={href} rel="noreferrer">
+        <slot />
+    </a>
+
+    <span class="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-color-background bg-color-primary before:content-[''] before:absolute before:bg-color-primary before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-2 text-xs">
+        {name}
+    </span>
+</span>
+

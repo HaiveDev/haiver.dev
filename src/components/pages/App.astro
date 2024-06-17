@@ -1,5 +1,4 @@
 ---
-
 import Layout from "@/layouts/Layout.astro";
 import SectionContainer from "@/components/SectionContainer.astro";
 
@@ -7,94 +6,98 @@ import TimeLine from "@/components/TimeLine.astro";
 import Projects from "@/components/Projects.astro";
 import LastPosts from "@/components/LastPosts.astro";
 
-import CopyEmail from "@/components/CopyEmail";
-import BadgeSocial from "@/components/BadgeSocial.astro"
+import BadgeSocial from "@/components/Social.astro"
 
-import { IconBrandGithub, IconBrandLinkedin, IconBrandDiscord, IconFileDescription, IconMapPin, IconHammer, IconNotification } from "@tabler/icons-react";
+import { IconBrandGithub, IconBrandLinkedin, IconBrandDiscord,IconBrandTwitch, IconArrowUpRight, IconCircleFilled, IconMapPin } from "@tabler/icons-react";
 
 import { getI18N } from "@/i18n"
 
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
-
 ---
 
 <Layout title={i18n.SEO_TITLE}>
     <main class="px-4">
-        <SectionContainer class="mt-20">
-            <h1 class="-translate-x-0.5 sm:-translate-x-1 font-black w-full text-4xl lg:text-5xl xl:text-6xl">
+        <SectionContainer class="mt-10 md:mt-20">
+            <h1 class="w-full text-center font-black text-4xl xl:text-5xl text-color-primary">
                 {i18n.PRESENTATION_TITLE}
             </h1>
-            <div class="sm:flex items-center sm:space-x-2">
-                <span class="text-xl sm:text-2xl font-semibold">
+            <section class="flex-w w-full text-center">
+                <span class="text-base text-color-secondary">
                     { i18n.PRESENTATION_DESCRIPTION }
                 </span>
-                <div class="flex gap-2">
-                    <a href="https://linkedin.com/in/haiver/" target="_blank" rel="noreferrer" class='block w-max sm:inline text-green-500 animate-background-shine cursor-pointer justify-center rounded-md border border-green-500 bg-[linear-gradient(110deg,#22c55e1a,50%,#22c55e66,55%,#22c55e1a)] bg-[length:250%_100%] px-2.5 py-0.5 text-sm'>
+                <div class="flex group items-center justify-center gap-1 mt-2" >
+                    <IconCircleFilled className="text-green-500" width={8} />
+                    <a 
+                        href="https://linkedin.com/in/haiver/"
+                        class="text-color-primary after:bg-color-secondary relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-paragraph after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100">
                         {i18n.TAG_CHAMBA}
                     </a>
-                    <span class="text-sm flex items-center gap-1 w-max">
-                      <IconMapPin width={16} /> <span class="hidden sm:block">Colombia</span><span class="sm:hidden">COL</span> • GMT-4
-                    </span>
+                    
+                    <IconArrowUpRight className="transition-all duration-300 group-hover:translate-x-[2px] text-color-subtle group-hover:text-color-primary" width={16} />
                 </div>
-            </div>
-            
-            <div class="mt-6 max-w-[700px] text-lg sm:text-xl">
+            </section>
+
+            <section class="mt-6 w-full">
                 <!-- <p class="text-pretty">
                     {i18n.PARAGRAPH_DESCRIPTION}
                 </p> -->
-                <div class="mt-2 flex gap-2">
-                    <CopyEmail client:load />
-                    <BadgeSocial href="https://linkedin.com/in/haiver/" class="">
-                        <span class="hidden sm:block">
-                            Linkedin
+                <div class="mt-2 flex justify-center gap-2 items-center text-color-secondary text-sm">
+                    <a
+                        href="mailto:contact@haiver.dev"
+                        class=" flex items-center h-[34px] text-sm bg-[#f5b207]/10 text-[#f5b207] rounded-md px-2.5 py-1">
+                        contact@haiver.dev
+                    </a>
+                    <div class="flex justify-center gap-1 items-center">
+                        <IconMapPin width={16} height={16} stroke={1.5} />
+                        <span class="">
+                            Colombia • GMT-4
                         </span>
-                        <IconBrandLinkedin width={16}/>
-                    </BadgeSocial>
-                    <BadgeSocial href="https://github.com/HaiveDev/" class="">
-                        <span class="hidden sm:block">
-                            GitHub
-                        </span>
-                        <IconBrandGithub width={16}/>
-                    </BadgeSocial>
-                    <BadgeSocial href="https://discord.com/users/897660552892002304/" class="">
-                        <span class="hidden sm:block">
-                            Discord
-                        </span>
-                        <IconBrandDiscord width={16}/>
-                    </BadgeSocial>
+                    </div>
                 </div>
-            </div>
-        </SectionContainer>
+                <div class="mt-2 w-full justify-center items-center gap-1 flex">
+                    
 
-        <SectionContainer id={i18n.HEADER.NAVBAR.EXPERIENCE} class="pt-14 mt-20">
-            <h2 class="capitalize flex items-center space-x-4 mb-6">
-                <span class="text-2xl sm:text-3xl font-semibold">
-                    {i18n.HEADER.NAVBAR.EXPERIENCE}
-                </span>
-                <IconFileDescription width={32} height={32} />
-            </h2>
-            <TimeLine />
-        </SectionContainer>
+                    <BadgeSocial href="https://linkedin.com/in/haiver/" name="Linkedin" class="hover:bg-white/5">
+                        <IconBrandLinkedin width={24} height={24} stroke={1.5} />
+                    </BadgeSocial>
+                    <BadgeSocial href="https://github.com/HaiveDev/" name="GitHub" class="hover:bg-white/5">
+                        <IconBrandGithub width={24} height={24} stroke={1.5} />
+                    </BadgeSocial>
+                    <BadgeSocial href="https://discord.com/users/897660552892002304/" name="Discord" class="hover:bg-white/5">
+                        <IconBrandDiscord width={24} height={24} stroke={1.5} />
+                    </BadgeSocial>
+                    <BadgeSocial href="https://twitch.tv/im-haiver" name="Twitch" class="hover:bg-white/5">
+                        <IconBrandTwitch width={24} height={24} stroke={1.5} />
+                    </BadgeSocial>
 
-        <SectionContainer id={i18n.HEADER.NAVBAR.PROJECTS} class="pt-14 mt-20">
-            <h2 class="capitalize flex items-center space-x-4 mb-6">
-                <span class="text-2xl sm:text-3xl font-semibold">
-                    {i18n.HEADER.NAVBAR.PROJECTS}
-                </span>
-                <IconHammer width={32} height={32} />
-            </h2>
-            <Projects />
-        </SectionContainer>
-        <SectionContainer class="pt-14 mt-20">
-            <h2 class="capitalize flex items-center space-x-4 mb-6">
-                <span class="text-2xl sm:text-3xl font-semibold">
-                    Ultimos posts
-                </span>
-                <IconNotification width={32} height={32} />
-            </h2>
-            <LastPosts />
+                </div>
+            </section>
+
+            <section id={i18n.HEADER.NAVBAR.EXPERIENCE} class="mt-20 md:pt-16">
+                <h2 class="mb-4 capitalize">
+                    <span class="text-2xl font-semibold sm:text-3xl text-color-primary">
+                        {i18n.HEADER.NAVBAR.EXPERIENCE}
+                    </span>
+                </h2>
+                <TimeLine />
+            </section >
+
+            <section id={i18n.HEADER.NAVBAR.PROJECTS} class="mt-20 md:pt-16">
+                <h2 class="mb-4 capitalize">
+                    <span class="text-2xl font-semibold sm:text-3xl text-color-primary">
+                        {i18n.HEADER.NAVBAR.PROJECTS}
+                    </span>
+                </h2>
+                <Projects />
+            </section>
+
+            <section class="mt-20 md:pt-16">
+                <h2 class="mb-4 capitalize">
+                    <span class="text-2xl font-semibold sm:text-3xl text-color-primary"> Ultimos posts </span>
+                </h2>
+                <LastPosts />
+            </section>
         </SectionContainer>
     </main>
 </Layout>
-
