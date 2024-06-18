@@ -1,19 +1,53 @@
 ---
-import { IconArrowUpRight } from "@tabler/icons-react"
+import { IconArrowUpRight, IconBrandGithub } from "@tabler/icons-react"
 ---
 
-<div class="gap-2 grid md:grid-cols-2">
-    <article class="space-y-2 md:gap-6 border border-gray-border p-3 rounded-md group cursor-pointer hover:bg-[#ffffff05] transition-all duration-300">
+<div class="gap-2 grid sm:grid-cols-2">
+    <article class="space-y-2 md:gap-6 border border-gray-border p-3 rounded-md group hover:bg-[#ffffff05] transition-all duration-300">
+        <h3 class="flex items-center justify-between gap-2 text-lg text-color-primary">
+            <span class="font-semibold">
+                VexaAnnounce
+            </span>
+            <a target="_blank" href="https://github.com/HaiveDev/vexa" rel="noreferrer" class="group/icon">
+                <IconBrandGithub width={16} height={16} className="text-color-subtle group-hover/icon:text-color-primary" />
+            </a>
+            <!-- <IconArrowUpRight className="transition-all duration-300 group-hover:translate-x-[2px] -translate-y-[2px] text-color-subtle group-hover:text-color-primary" width={16} height={16} /> -->
+        </h3>
+        <div class="relative overflow-hidden border border-gray-border rounded-md">
+            <img src="https://cdn.haiver.dev/imgs/proyectos/VexaAnnounce.webp" alt="" class="transition-all hover:scale-105 h-56 w-full object-cover group-hover:object-bottom object-top saturate-200 ">
+        </div>
+        <div class="flex-col h-full">
+            <div class="my-4">
+                <p class="text-pretty text-color-secondary">
+                    Bot de Discord desarrollado para <strong>anunciar mensajes programados</strong>, generar tickets, programar el borrado de mensajes en canales y un <strong>sistema automático de moderación</strong>. 
+                </p>
+            </div>
+            <div class="flex flex-wrap mt-auto gap-1">
+                <span class="transition-all flex items-center text-xs text-color-secondary border-gray-border space-x-2  rounded-md border px-2.5 py-1">
+                    JavaScript
+                </span>
+                <span class="transition-all flex items-center text-xs text-color-secondary border-gray-border space-x-2 rounded-md border px-2.5 py-1">
+                    Node.js
+                </span>
+                <span class="transition-all flex items-center text-xs text-color-secondary border-gray-border space-x-2 rounded-md border px-2.5 py-1">
+                    Discord.js
+                </span>
+            </div>
+        </div>
+    </article>
+    <article class="space-y-2 md:gap-6 border border-gray-border p-3 rounded-md group hover:bg-[#ffffff05] transition-all duration-300">
         <h3 class="flex items-center justify-between text-lg text-color-primary">
             <span class="font-semibold">
                 Mesa de ayuda
             </span>
-            <IconArrowUpRight className="transition-all duration-300 group-hover:translate-x-[2px] -translate-y-[2px] text-color-subtle group-hover:text-color-primary" width={16} />
+            <!-- <IconArrowUpRight className="transition-all duration-300 group-hover:translate-x-[2px] -translate-y-[2px] text-color-subtle group-hover:text-color-primary" width={16} height={16} /> -->
         </h3>
-        <img src="https://cdn.haiver.dev/imgs/proyectos/mesaDeAyuda.webp" alt="" class="rounded-md">
-        <div class="flex flex-col justify-between">
-            <div class="mb-4">
-                <p class="mt-2 text-pretty text-color-secondary text-sm">
+        <div class="relative overflow-hidden border border-gray-border rounded-md">
+            <img src="https://cdn.haiver.dev/imgs/proyectos/mesaDeAyuda.webp" alt="" class="h-56 w-full object-cover object-top saturate-200 group-hover:scale-150 transition-all">
+        </div>
+        <div class="flex-col justify-between">
+            <div class="my-4">
+                <p class="text-pretty text-color-secondary">
                     Sistema interno con panel administrativo, desarrollado para <strong>agilizar la resolución de problemas</strong> sin necesidad de intervención técnica, cuenta con un <strong>buscador inteligente</strong> y un <strong>sistema de tickets</strong>.
                 </p>
             </div>
@@ -33,31 +67,5 @@ import { IconArrowUpRight } from "@tabler/icons-react"
             </div>
         </div>
     </article>
-    <article class="space-y-2 md:gap-6 border border-gray-border p-3 rounded-md group cursor-pointer hover:bg-[#ffffff05] transition-all duration-300">
-        <h3 class="flex items-center justify-between gap-2 text-lg text-color-primary">
-            <span class="font-semibold">
-                VexaAnnounce
-            </span>
-            <IconArrowUpRight className="transition-all duration-300 group-hover:translate-x-[2px] -translate-y-[2px] text-color-subtle group-hover:text-color-primary" width={16} />
-        </h3>
-        <img src="https://cdn.haiver.dev/imgs/proyectos/VexaAnnounce.webp" alt="" class="rounded-md">
-        <div class="flex flex-col justify-between">
-            <div class="mb-4">
-                <p class="mt-2 text-pretty text-color-secondary text-sm">
-                    Bot de Discord desarrollado para <strong>anunciar mensajes programados</strong>, generar tickets, programar el borrado de mensajes en canales y un <strong>sistema automático de moderación</strong>. 
-                </p>
-            </div>
-            <div class="flex flex-wrap gap-1">
-                <span class="transition-all flex items-center text-xs text-color-secondary border-gray-border space-x-2  rounded-md border px-2.5 py-1">
-                    JavaScript
-                </span>
-                <span class="transition-all flex items-center text-xs text-color-secondary border-gray-border space-x-2 rounded-md border px-2.5 py-1">
-                    Node.js
-                </span>
-                <span class="transition-all flex items-center text-xs text-color-secondary border-gray-border space-x-2 rounded-md border px-2.5 py-1">
-                    Discord.js
-                </span>
-            </div>
-        </div>
-    </article>
+    
 </div>
