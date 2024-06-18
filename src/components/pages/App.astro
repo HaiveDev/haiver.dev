@@ -8,7 +8,7 @@ import LastPosts from "@/components/LastPosts.astro";
 
 import BadgeSocial from "@/components/Social.astro"
 
-import { IconBrandGithub, IconBrandLinkedin, IconBrandDiscord,IconBrandTwitch, IconArrowUpRight, IconCircleFilled, IconMapPin } from "@tabler/icons-react";
+import { IconBrandGithub, IconBrandLinkedin, IconBrandDiscord,IconBrandTwitch, IconArrowUpRight, IconCircleFilled, IconMapPin, IconChevronRight } from "@tabler/icons-react";
 
 import { getI18N } from "@/i18n"
 
@@ -75,27 +75,29 @@ const i18n = getI18N({ currentLocale })
             </section>
 
             <section id={i18n.HEADER.NAVBAR.EXPERIENCE} class="mt-20 md:pt-16">
-                <h2 class="mb-4 capitalize">
-                    <span class="text-2xl font-semibold sm:text-3xl text-color-primary">
-                        {i18n.HEADER.NAVBAR.EXPERIENCE}
-                    </span>
+                <h2 class="mb-4 capitalize text-2xl font-semibold sm:text-3xl text-color-primary">
+                    {i18n.HEADER.NAVBAR.EXPERIENCE}
                 </h2>
                 <TimeLine />
             </section >
 
             <section id={i18n.HEADER.NAVBAR.PROJECTS} class="mt-20 md:pt-16">
-                <h2 class="mb-4 capitalize">
-                    <span class="text-2xl font-semibold sm:text-3xl text-color-primary">
-                        {i18n.HEADER.NAVBAR.PROJECTS}
-                    </span>
+                <h2 class="mb-4 capitalize text-2xl font-semibold sm:text-3xl text-color-primary">
+                    {i18n.HEADER.NAVBAR.PROJECTS}
                 </h2>
                 <Projects />
             </section>
 
             <section class="mt-20 md:pt-16">
-                <h2 class="mb-4 capitalize">
-                    <span class="text-2xl font-semibold sm:text-3xl text-color-primary"> Ultimos posts </span>
-                </h2>
+                <div class="flex justify-between items-center">
+                    <h2 class="mb-4 capitalize text-2xl font-semibold sm:text-3xl text-color-primary">
+                        Ultimos posts
+                    </h2>
+                    <a href="/blog" class="text-sm text-color-subtle hover:text-color-primary flex items-center transition-all">
+                        <span class="leading-none">Ver más!</span>
+                        <IconChevronRight width={16} height={16} stroke={1.5} />
+                    </a>
+                </div>
                 <LastPosts />
             </section>
         </SectionContainer>
