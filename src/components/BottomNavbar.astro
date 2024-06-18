@@ -19,22 +19,28 @@ const links = [
 
 <div class="fixed z-50 bottom-0 pt-4 w-full text-color-primary md:hidden">
     
-    <nav class="backdrop-blur-md bg-color-blur flex justify-between items-center rounded-md rounded-b-none border border-gray-border px-3 py-3">
+    <nav class="backdrop-blur-md bg-color-blur gap-1 grid grid-cols-5 items-center rounded-md rounded-b-none border border-gray-border p-2">
         
-        <a class="rounded-md rounded-bl-3xl capitalize px-4 py-4 transition-all ease-in-out hover:bg-white/5" href={links[0].url}>
-            <IconTimelineEventText width={32} height={32}  />
+        <a class="text-center rounded-md rounded-bl-3xl capitalize p-2 transition-all ease-in-out hover:bg-white/5" href={links[0].url}>
+            <IconTimelineEventText className="mx-auto" width={32} height={32}  />
+            <span class="text-xs hidden sm:block" >{i18n.HEADER.NAVBAR.EXPERIENCE}</span>
+            <span class="text-xs sm:hidden" >Exp...</span>
         </a>    
-        <a class="rounded-md capitalize px-4 py-4 transition-all ease-in-out hover:bg-white/5" href={links[1].url}>
-            <IconCode width={32} height={32}  />
+        <a class="text-center rounded-md capitalize p-2 transition-all ease-in-out hover:bg-white/5" href={links[1].url}>
+            <IconCode className="mx-auto" width={32} height={32}  />
+            <span class="text-xs" >{i18n.HEADER.NAVBAR.PROJECTS}</span>
         </a>    
-        <a class="rounded-md capitalize px-4 py-4 transition-all ease-in-out hover:bg-white/5" href={links[2].url}>
-            <IconSmartHome width={32} height={32} />
+        <a class="text-center rounded-md capitalize p-2 transition-all ease-in-out hover:bg-white/5" href={links[2].url}>
+            <IconSmartHome className="mx-auto" width={32} height={32} />
+            <span class="text-xs" >{i18n.HEADER.NAVBAR.HOME}</span>
         </a>    
-        <a class="rounded-md capitalize px-4 py-4 transition-all ease-in-out hover:bg-white/5" href='/blog'>
-            <IconWriting width={32} height={32}  />
+        <a class="text-center rounded-md capitalize p-2 transition-all ease-in-out hover:bg-white/5" href='/blog'>
+            <IconWriting className="mx-auto" width={32} height={32}  />
+            <span class="text-xs" >Blog</span>
         </a>    
-        <a class="rounded-md rounded-br-3xl capitalize px-4 py-4 transition-all ease-in-out hover:bg-white/5" href='/stack'>
-            <IconStack2 width={32} height={32}  />
+        <a class="text-center rounded-md rounded-br-3xl capitalize p-2 transition-all ease-in-out hover:bg-white/5" href='/stack'>
+            <IconStack2 className="mx-auto" width={32} height={32}  />
+            <span class="text-xs" >Stack</span>
         </a>    
     </nav>
     
