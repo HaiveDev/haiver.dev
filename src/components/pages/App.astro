@@ -18,7 +18,8 @@ const i18n = getI18N({ currentLocale })
 
 <Layout title={i18n.SEO_TITLE}>
     <main class="px-4">
-        <SectionContainer class="mt-10 md:mt-20">
+        <!-- <SectionContainer class="mt-10 md:mt-20"> -->
+        <SectionContainer class="mt-40">
             <h1 class="w-full text-center font-black text-4xl xl:text-5xl text-color-primary">
                 {i18n.PRESENTATION_TITLE}
             </h1>
@@ -29,6 +30,7 @@ const i18n = getI18N({ currentLocale })
                 <div class="flex group items-center justify-center gap-1 mt-2" >
                     <IconCircleFilled className="text-green-500" width={8} />
                     <a 
+                        target="_blank" rel="noreferrer"
                         href="https://linkedin.com/in/haiver/"
                         class="text-color-primary after:bg-color-secondary relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-paragraph after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100">
                         {i18n.TAG_CHAMBA}
@@ -51,7 +53,7 @@ const i18n = getI18N({ currentLocale })
                     <div class="flex justify-center gap-1 items-center">
                         <IconMapPin width={16} height={16} stroke={1.5} />
                         <span class="">
-                            Colombia • GMT-4
+                            Colombia • GMT -5
                         </span>
                     </div>
                 </div>
@@ -74,7 +76,7 @@ const i18n = getI18N({ currentLocale })
                 </div>
             </section>
 
-            <section id={i18n.HEADER.NAVBAR.EXPERIENCE} class="mt-20 md:pt-16">
+            <!-- <section id={i18n.HEADER.NAVBAR.EXPERIENCE} class="mt-20 md:pt-16">
                 <h2 class="mb-4 capitalize text-2xl font-semibold sm:text-3xl text-color-primary">
                     {i18n.HEADER.NAVBAR.EXPERIENCE}
                 </h2>
@@ -99,7 +101,7 @@ const i18n = getI18N({ currentLocale })
                     </a>
                 </div>
                 <LastPosts />
-            </section>
+            </section> -->
         </SectionContainer>
     </main>
 </Layout>
