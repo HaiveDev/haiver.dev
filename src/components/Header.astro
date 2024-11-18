@@ -11,12 +11,13 @@ if (currentLocale !== 'es'){
 
 const links = [
     { text: `${i18n.HEADER.NAVBAR.HOME}`, url: `/${ruta}#${i18n.HEADER.NAVBAR.HOME}` },
-    { text: `${i18n.HEADER.NAVBAR.EXPERIENCE}`, url: `/${ruta}#${i18n.HEADER.NAVBAR.EXPERIENCE}` },
-    { text: `${i18n.HEADER.NAVBAR.PROJECTS}`, url: `/${ruta}#${i18n.HEADER.NAVBAR.PROJECTS}` },
+    /* { text: `${i18n.HEADER.NAVBAR.EXPERIENCE}`, url: `/${ruta}#${i18n.HEADER.NAVBAR.EXPERIENCE}` },
+    { text: `${i18n.HEADER.NAVBAR.PROJECTS}`, url: `/${ruta}#${i18n.HEADER.NAVBAR.PROJECTS}` }, */
   ];
 ---
 
-<header class="sticky z-10 top-0 pt-4 w-full md:flex justify-center text-color-primary hidden">
+<!-- <header class="sticky z-10 top-0 pt-4 w-full md:flex justify-center text-color-primary hidden"> -->
+<header class="sticky z-10 top-0 pt-4 w-full flex justify-center text-color-primary">
     
     <nav class="space-x-1 backdrop-blur-md bg-color-blur flex items-center rounded-md border border-gray-border px-3 py-1">
         
@@ -26,9 +27,9 @@ const links = [
             </a>
         ))}
         <span class="text-color-subtle font-light text-xl" >|</span>
-        <a class="rounded-md capitalize px-3 py-0.5 transition-all ease-in-out hover:bg-white/5" href='/blog'>
+        <!-- <a class="rounded-md capitalize px-3 py-0.5 transition-all ease-in-out hover:bg-white/5" href='/blog'>
             Blog
-        </a>    
+        </a> -->    
         <a class="rounded-md capitalize px-3 py-0.5 transition-all ease-in-out hover:bg-white/5" href='/stack'>
             Stack
         </a>    
